@@ -1,0 +1,17 @@
+C:\DEVPROG\ProjectDevice\ProjectDevice\ProjectDevice\ProjectDevice\bin\Debug\netstandard2.0\ProjectDevice.deps.json
+C:\DEVPROG\ProjectDevice\ProjectDevice\ProjectDevice\ProjectDevice\bin\Debug\netstandard2.0\ProjectDevice.dll
+C:\DEVPROG\ProjectDevice\ProjectDevice\ProjectDevice\ProjectDevice\bin\Debug\netstandard2.0\ProjectDevice.pdb
+C:\DEVPROG\ProjectDevice\ProjectDevice\ProjectDevice\ProjectDevice\obj\Debug\netstandard2.0\ProjectDevice.csproj.AssemblyReference.cache
+C:\DEVPROG\ProjectDevice\ProjectDevice\ProjectDevice\ProjectDevice\obj\Debug\netstandard2.0\ProjectDevice.GeneratedMSBuildEditorConfig.editorconfig
+C:\DEVPROG\ProjectDevice\ProjectDevice\ProjectDevice\ProjectDevice\obj\Debug\netstandard2.0\AddPage.xaml.g.cs
+C:\DEVPROG\ProjectDevice\ProjectDevice\ProjectDevice\ProjectDevice\obj\Debug\netstandard2.0\App.xaml.g.cs
+C:\DEVPROG\ProjectDevice\ProjectDevice\ProjectDevice\ProjectDevice\obj\Debug\netstandard2.0\DetailPage.xaml.g.cs
+C:\DEVPROG\ProjectDevice\ProjectDevice\ProjectDevice\ProjectDevice\obj\Debug\netstandard2.0\MainPage.xaml.g.cs
+C:\DEVPROG\ProjectDevice\ProjectDevice\ProjectDevice\ProjectDevice\obj\Debug\netstandard2.0\ProjectDevice.AssemblyInfoInputs.cache
+C:\DEVPROG\ProjectDevice\ProjectDevice\ProjectDevice\ProjectDevice\obj\Debug\netstandard2.0\ProjectDevice.AssemblyInfo.cs
+C:\DEVPROG\ProjectDevice\ProjectDevice\ProjectDevice\ProjectDevice\obj\Debug\netstandard2.0\ProjectDevice.csproj.CoreCompileInputs.cache
+C:\DEVPROG\ProjectDevice\ProjectDevice\ProjectDevice\ProjectDevice\obj\Debug\netstandard2.0\XamlC.stamp
+C:\DEVPROG\ProjectDevice\ProjectDevice\ProjectDevice\ProjectDevice\obj\Debug\netstandard2.0\ProjectDevice.dll
+C:\DEVPROG\ProjectDevice\ProjectDevice\ProjectDevice\ProjectDevice\obj\Debug\netstandard2.0\refint\ProjectDevice.dll
+C:\DEVPROG\ProjectDevice\ProjectDevice\ProjectDevice\ProjectDevice\obj\Debug\netstandard2.0\ProjectDevice.pdb
+C:\DEVPROG\ProjectDevice\ProjectDevice\ProjectDevice\ProjectDevice\obj\Debug\netstandard2.0\ref\ProjectDevice.dll
