@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Xamarin.Forms;
+using Xamarin.Forms.PlatformConfiguration.iOSSpecific;
 
 namespace ProjectDevice
 {
@@ -17,6 +18,12 @@ namespace ProjectDevice
         {
             InitializeComponent();
             testRepo();
+            showCocktails();
+        }
+
+        private async Task showCocktails()
+        {
+            lvwCocktail.ItemsSource = await CocktailRepo.GetCocktails();
         }
 
         private async Task testRepo()
@@ -24,7 +31,7 @@ namespace ProjectDevice
             List<Cocktail> cocktails = await CocktailRepo.GetCocktails();
             foreach(var cocktail in cocktails)
             {
-                Debug.WriteLine(cocktail.Name);
+                Debug.WriteLine(cocktail);
             }
         }
     }
