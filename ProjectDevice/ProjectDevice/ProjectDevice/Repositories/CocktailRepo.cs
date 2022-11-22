@@ -72,6 +72,31 @@ namespace ProjectDevice.Repositories
         }
 
 
+        public static async Task UpdateCocktail(Cocktail item)
+        {
+            string url = $"{_BASEURL}update/cocktail";
+            using (HttpClient client = GetHttpClient())
+            {
+                try
+                {
+                    string json = JsonConvert.SerializeObject(item);
+                    StringContent content = new StringContent(json, Encoding.UTF8, "application/json");
+                    var response = await client.PutAsync(url, content);
+
+                    if (!response.IsSuccessStatusCode)
+                    {
+                        string errmsg = $"Unsuccesfull PUT to url: {url} and object json: {json}";
+                        throw new Exception(errmsg);
+                    }
+
+
+                }
+                catch (Exception ex)
+                {
+                    throw ex;
+                }
+            }
+        }
 
     }
 }
