@@ -2,6 +2,7 @@
 using ProjectDevice.Models;
 using System;
 using System.Collections.Generic;
+using System.Dynamic;
 using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
@@ -11,7 +12,7 @@ namespace ProjectDevice.Repositories
     public class CocktailRepo
     {
 
-        public const string _BASEURL = "https://facocktails.azurewebsites.net/api/cocktails";
+        public const string _BASEURL = "https://facocktails.azurewebsites.net/api/";
 
         public static HttpClient GetHttpClient()
         {
@@ -20,9 +21,10 @@ namespace ProjectDevice.Repositories
             return client;
         }
 
+        /*Cocktails opvragen*/
         public static async Task<List<Cocktail>> GetCocktails()
         {
-            string url = $"{_BASEURL}";
+            string url = $"{_BASEURL}/cocktails";
 
             using (HttpClient client = GetHttpClient())
             {
@@ -41,6 +43,32 @@ namespace ProjectDevice.Repositories
                 }
             }
 
+        }
+
+        /*Cocktails toevoegen*/
+        public static async Task AddCocktail(Cocktail item)
+        {
+            string url = $"{_BASEURL}add/cocktail";
+            using (HttpClient client = GetHttpClient())
+            {
+                try
+                {
+                    string json = JsonConvert.SerializeObject(item);
+                    StringContent content = new StringContent(json, Encoding.UTF8, "application/json");
+                    var response = await client.PostAsync(url, content);
+
+                    if (!response.IsSuccessStatusCode)
+                    {
+                        string errmsg = $"Unsuccesfull POST to url: {url} and object json: {json}";
+                        throw new Exception(errmsg);
+                    }
+
+                }
+                catch (Exception ex)
+                {
+                    throw ex;
+                }
+            }
         }
 
     }
