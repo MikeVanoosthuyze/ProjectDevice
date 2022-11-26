@@ -2,11 +2,13 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="ProjectDevice.MainPage">
+    
 
-    <ListView x:Name="lvwCocktail" BackgroundColor="#FFF1E4">
-        <ListView.ItemTemplate >
+    <ListView x:Name="lvwCocktail" BackgroundColor="#FFF1E4" ItemSelected="lvwCocktail_ItemSelected">
+        <ListView.ItemTemplate>
             <DataTemplate>
-                <ImageCell ImageSource="{Binding Image}" Text="{Binding Name}" TextColor="Black" Detail="{Binding Ingredient1}"  DetailColor="#864A15"/>
+                <!-- ImageCell: display an image on the left, and text and detail on the right-->
+                <ImageCell ImageSource="{Binding Image}" Text="{Binding Name}" TextColor="Black" Detail="{Binding Ingredient1}" />
             </DataTemplate>
         </ListView.ItemTemplate>
     </ListView>

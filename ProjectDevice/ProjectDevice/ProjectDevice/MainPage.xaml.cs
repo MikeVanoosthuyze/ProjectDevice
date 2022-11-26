@@ -20,33 +20,45 @@ namespace ProjectDevice
         public MainPage()
         {
             InitializeComponent();
-            /*testRepo();*/
             showCocktails();
+            /*testRepo();*/
             /*showCocktails();*/
         }
         public async Task showCocktails()
         {
             lvwCocktail.ItemsSource = await CocktailRepo.GetOwnCocktails();
-            lvwCocktail.ItemsSource = await CocktailRepo.GetCocktails();
+            /*lvwCocktail.ItemsSource = await CocktailRepo.GetCocktails();*/
         }
 
-        public static List<BaseClass> GetAllCocktails()
+        private void lvwCocktail_ItemSelected(object sender, SelectedItemChangedEventArgs e)
         {
 
-            List<BaseClass> results = new List<BaseClass>();
+            // nagaan of er wel een object is
+            if(lvwCocktail.SelectedItem != null)
+            {
+                // object opvragen
+                OwnCocktail selected = (OwnCocktail)lvwCocktail.SelectedItem;
+                // Naar detail pagina gaan.
+                Navigation.PushAsync(new DetailPage(selected));
+                // oneindige lussen voorkomen
+                lvwCocktail.SelectedItem = selected;
 
-            results.AddRange(GetOwnCocktails());
-            results.AddRange(GetCocktails());
-
-            return results;
+            }
 
         }
 
-
-        /*        public async Task showCocktails()
+        /*        public static List<BaseClass> GetAllCocktails()
                 {
 
+                    List<BaseClass> results = new List<BaseClass>();
+
+                    results.AddRange(GetOwnCocktails());
+                    results.AddRange(GetCocktails());
+
+                    return results;
+
                 }*/
+
 
         /* private async Task testRepo()
          {

@@ -3,10 +3,13 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="ProjectDevice.DetailPage">
     <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
+        <StackLayout Margin="16" Spacing="0">
+            <Image x:Name="imgType" Aspect="AspectFill" />
+            <StackLayout BackgroundColor="Black" Padding="8">
+                <Label x:Name="lblTitle" Text="(price)" TextColor="White" />
+                <Label x:Name="lblInstructions" Text="(type)" TextColor="White" />
+
+            </StackLayout>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
