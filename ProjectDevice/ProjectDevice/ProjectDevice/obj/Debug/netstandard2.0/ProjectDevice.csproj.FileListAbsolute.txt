@@ -15,3 +15,5 @@ C:\DEVPROG\ProjectDevice\ProjectDevice\ProjectDevice\ProjectDevice\obj\Debug\net
 C:\DEVPROG\ProjectDevice\ProjectDevice\ProjectDevice\ProjectDevice\obj\Debug\netstandard2.0\refint\ProjectDevice.dll
 C:\DEVPROG\ProjectDevice\ProjectDevice\ProjectDevice\ProjectDevice\obj\Debug\netstandard2.0\ProjectDevice.pdb
 C:\DEVPROG\ProjectDevice\ProjectDevice\ProjectDevice\ProjectDevice\obj\Debug\netstandard2.0\ref\ProjectDevice.dll
+C:\DEVPROG\ProjectDevice\ProjectDevice\ProjectDevice\ProjectDevice\obj\Debug\netstandard2.0\Alcoholic.xaml.g.cs
+C:\DEVPROG\ProjectDevice\ProjectDevice\ProjectDevice\ProjectDevice\obj\Debug\netstandard2.0\NonAlcoholic.xaml.g.cs

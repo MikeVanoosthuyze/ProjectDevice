@@ -12,25 +12,26 @@ using System.Threading.Tasks;
 using Xamarin.Forms;
 using Xamarin.Forms.PlatformConfiguration.iOSSpecific;
 using static System.Net.Mime.MediaTypeNames;
+using TabbedPage = Xamarin.Forms.TabbedPage;
 
 namespace ProjectDevice
 {
-    public partial class MainPage : ContentPage
+    public partial class MainPage : TabbedPage
     {
         public MainPage()
         {
             InitializeComponent();
-            showCocktails();
+            /*showCocktails();*/
             /*testRepo();*/
             /*showCocktails();*/
         }
-        public async Task showCocktails()
+/*        public async Task showCocktails()
         {
             lvwCocktail.ItemsSource = await CocktailRepo.GetOwnCocktails();
-            /*lvwCocktail.ItemsSource = await CocktailRepo.GetCocktails();*/
-        }
+            
+        }*/
 
-        private void lvwCocktail_ItemSelected(object sender, SelectedItemChangedEventArgs e)
+        /*private void lvwCocktail_ItemSelected(object sender, SelectedItemChangedEventArgs e)
         {
 
             // nagaan of er wel een object is
@@ -45,7 +46,7 @@ namespace ProjectDevice
 
             }
 
-        }
+        }*/
 
         /*        public static List<BaseClass> GetAllCocktails()
                 {

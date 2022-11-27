@@ -1,10 +1,10 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="ProjectDevice.AddPage">
+             x:Class="ProjectDevice.NonAlcoholic">
     <ContentPage.Content>
         <StackLayout>
-            <Label Text="Welcome to Add drink!"
+            <Label Text="Welcome to NON ALCHOLIC"
                    FontSize="35"
                 VerticalOptions="CenterAndExpand" 
                 HorizontalOptions="CenterAndExpand" />

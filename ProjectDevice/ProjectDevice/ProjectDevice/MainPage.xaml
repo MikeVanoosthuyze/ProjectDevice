@@ -1,16 +1,17 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+<TabbedPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="ProjectDevice.MainPage">
+             x:Class="ProjectDevice.MainPage" xmlns:local="clr-namespace:ProjectDevice"
+             BarBackground="#BC4B4B"
+            SelectedTabColor="White"
+            UnselectedTabColor="white" 
+            xmlns:android="clr-namespace:Xamarin.Forms.PlatformConfiguration.AndroidSpecific;assembly=Xamarin.Forms.Core"
+            android:TabbedPage.ToolbarPlacement="Bottom">
+
+    <!-- verwijzing naar pagina's -->
+    <local:Alcoholic Title="Alcholic"/>
+    <local:NonAlcoholic Title="Non alcholic"/>
+    <local:AddPage Title="Add drink"/>
     
 
-    <ListView x:Name="lvwCocktail" BackgroundColor="#FFF1E4" ItemSelected="lvwCocktail_ItemSelected">
-        <ListView.ItemTemplate>
-            <DataTemplate>
-                <!-- ImageCell: display an image on the left, and text and detail on the right-->
-                <ImageCell ImageSource="{Binding Image}" Text="{Binding Name}" TextColor="Black" Detail="{Binding AmountOfIngredients}"/>
-            </DataTemplate>
-        </ListView.ItemTemplate>
-    </ListView>
-
-</ContentPage>
+</TabbedPage>
