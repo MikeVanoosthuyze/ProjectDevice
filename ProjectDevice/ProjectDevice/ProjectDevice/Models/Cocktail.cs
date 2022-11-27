@@ -14,7 +14,7 @@ namespace ProjectDevice.Models
         public string Name { get; set; }
 
         [JsonProperty("strAlcoholic")]
-        public string Alcohlic { get; set; }
+        public string Alcoholic { get; set; }
 
         [JsonProperty("strInstructions")]
         public string Instructions { get; set; }

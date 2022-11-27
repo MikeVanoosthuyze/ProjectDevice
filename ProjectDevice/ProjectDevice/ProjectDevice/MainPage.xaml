@@ -8,10 +8,12 @@
             xmlns:android="clr-namespace:Xamarin.Forms.PlatformConfiguration.AndroidSpecific;assembly=Xamarin.Forms.Core"
             android:TabbedPage.ToolbarPlacement="Bottom">
 
-    <!-- verwijzing naar pagina's -->
+
     <local:Alcoholic Title="Alcholic"/>
     <local:NonAlcoholic Title="Non alcholic"/>
     <local:AddPage Title="Add drink"/>
     
+
+
 
 </TabbedPage>

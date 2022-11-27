@@ -27,8 +27,8 @@ namespace ProjectDevice.Repositories
         }
 
 
-        /*Cocktails opvragen*/
-        public static async Task<List<Cocktail>> GetCocktails()
+        /*Alcoholic cocktail opvragen*/
+        public static async Task<List<Cocktail>> GetAlcoholicCocktails()
         {
             string url = $"{_BASEURL}";
 
@@ -48,7 +48,61 @@ namespace ProjectDevice.Repositories
                     /* Hier doet newtonsoft zn werk */
                     List<Cocktail> cocktails = data.ToObject<List<Cocktail>>();
 
-                    return cocktails;
+                    /* Nieuwe lijst aanmaken */
+                    List<Cocktail> AlcoholicDrinks = new List<Cocktail>();
+
+                    foreach (Cocktail cocktail in cocktails)
+                    {
+                        if(cocktail.Alcoholic == "Alcoholic")
+                        {
+                            AlcoholicDrinks.Add(cocktail);
+                        }
+                    }
+
+                    return AlcoholicDrinks;
+                }
+                catch (Exception ex)
+                {
+                    // ALWAYS add a breakpoint here
+                    throw ex;
+                }
+            }
+
+        }
+
+        /*Alcoholic cocktail opvragen*/
+        public static async Task<List<Cocktail>> GetNonAlcoholicCocktails()
+        {
+            string url = $"{_BASEURL}";
+
+            using (HttpClient client = GetHttpClient())
+            {
+                try
+                {
+                    /*Opvragen van Api*/
+                    string json = await client.GetStringAsync(url);
+
+                    //deserialize object to JObject (< newtonsoft)
+                    JObject fullObject = JsonConvert.DeserializeObject<JObject>(json);
+
+                    //path to child token
+                    JToken data = fullObject.SelectToken("drinks");
+
+                    /* Hier doet newtonsoft zn werk */
+                    List<Cocktail> cocktails = data.ToObject<List<Cocktail>>();
+
+                    /* Nieuwe lijst aanmaken */
+                    List<Cocktail> AlcoholicDrinks = new List<Cocktail>();
+
+                    foreach (Cocktail cocktail in cocktails)
+                    {
+                        if (cocktail.Alcoholic != "Alcoholic")
+                        {
+                            AlcoholicDrinks.Add(cocktail);
+                        }
+                    }
+
+                    return AlcoholicDrinks;
                 }
                 catch (Exception ex)
                 {

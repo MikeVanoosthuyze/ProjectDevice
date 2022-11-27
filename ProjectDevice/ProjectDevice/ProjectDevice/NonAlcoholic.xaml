@@ -3,11 +3,12 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="ProjectDevice.NonAlcoholic">
     <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Welcome to NON ALCHOLIC"
-                   FontSize="35"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
-        </StackLayout>
+        <ListView x:Name="lvwNonAlcoholicCocktail" BackgroundColor="#FFF1E4" ItemSelected="lvwNonAlcoholicCocktail_ItemSelected">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ImageCell ImageSource="{Binding Image}" Text="{Binding Name}" TextColor="Black" Detail="{Binding Alcoholic}"/>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
     </ContentPage.Content>
 </ContentPage>
