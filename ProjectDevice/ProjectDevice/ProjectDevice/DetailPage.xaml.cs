@@ -16,10 +16,10 @@ namespace ProjectDevice
 
     public partial class DetailPage : ContentPage
     {
-        public OwnCocktail CocktailContent { get; set; }
+        public Cocktail CocktailContent { get; set; }
 
 
-        public DetailPage(OwnCocktail cocktail)
+        public DetailPage(Cocktail cocktail)
         {
             InitializeComponent();
             CocktailContent = cocktail;
@@ -33,16 +33,16 @@ namespace ProjectDevice
             lblTitle.Text = this.CocktailContent.Name;
             lblInstructions.Text = this.CocktailContent.Instructions;
             imgType.Source = this.CocktailContent.Image;
-            lblin1.Text = this.CocktailContent.Ingredient1;
-            lblin2.Text = this.CocktailContent.Ingredient2;
-            lblin3.Text = this.CocktailContent.Ingredient3;
-            lblin4.Text = this.CocktailContent.Ingredient4;
-            lblin5.Text = this.CocktailContent.Ingredient5;
-            lblin6.Text = this.CocktailContent.Ingredient6;
-            lblin7.Text = this.CocktailContent.Ingredient7;
-            lblin8.Text = this.CocktailContent.Ingredient8;
-            lblin9.Text = this.CocktailContent.Ingredient9;
-            lblin10.Text = this.CocktailContent.Ingredient10;
+            lblin1.Text = this.CocktailContent.ingredient1Measure;
+            lblin2.Text = this.CocktailContent.ingredient2Measure;
+            lblin3.Text = this.CocktailContent.ingredient3Measure;
+            lblin4.Text = this.CocktailContent.ingredient4Measure;
+            lblin5.Text = this.CocktailContent.ingredient5Measure;
+            lblin6.Text = this.CocktailContent.ingredient6Measure;
+            lblin7.Text = this.CocktailContent.ingredient7Measure;
+            lblin8.Text = this.CocktailContent.ingredient8Measure;
+            lblin9.Text = this.CocktailContent.ingredient9Measure;
+            lblin10.Text = this.CocktailContent.ingredient10Measure;
 
         }
     }

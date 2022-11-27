@@ -6,7 +6,7 @@
         <ListView x:Name="lvwNonAlcoholicCocktail" BackgroundColor="#FFF1E4" ItemSelected="lvwNonAlcoholicCocktail_ItemSelected">
             <ListView.ItemTemplate>
                 <DataTemplate>
-                    <ImageCell ImageSource="{Binding Image}" Text="{Binding Name}" TextColor="Black" Detail="{Binding Alcoholic}"/>
+                    <ImageCell ImageSource="{Binding Image}" Text="{Binding Name}" TextColor="Black" Detail="{Binding AmountOfIngredients}"/>
                 </DataTemplate>
             </ListView.ItemTemplate>
         </ListView>

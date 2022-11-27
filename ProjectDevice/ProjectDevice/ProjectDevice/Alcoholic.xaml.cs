@@ -18,7 +18,6 @@ namespace ProjectDevice
         public Alcoholic()
         {
             InitializeComponent();
-
             showAlcoholicCocktails();
             testRepo();
         }
@@ -26,7 +25,7 @@ namespace ProjectDevice
         private async Task showAlcoholicCocktails()
         {
 
-            lvwAlcoholicCocktail.ItemsSource = await CocktailRepo.GetCocktails();
+            lvwAlcoholicCocktail.ItemsSource = await CocktailRepo.GetAlcoholicCocktails();
         }
 
         private void lvwAlcoholicCocktail_ItemSelected(object sender, SelectedItemChangedEventArgs e)
@@ -36,7 +35,7 @@ namespace ProjectDevice
             if (lvwAlcoholicCocktail.SelectedItem != null)
             {
                 // object opvragen
-                OwnCocktail selected = (OwnCocktail)lvwAlcoholicCocktail.SelectedItem;
+                Cocktail selected = (Cocktail)lvwAlcoholicCocktail.SelectedItem;
                 // Naar detail pagina gaan.
                 Navigation.PushAsync(new DetailPage(selected));
                 // oneindige lussen voorkomen
