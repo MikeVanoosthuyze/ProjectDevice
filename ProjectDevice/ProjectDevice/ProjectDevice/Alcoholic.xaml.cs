@@ -22,7 +22,7 @@ namespace ProjectDevice
             testRepo();
         }
 
-        private async Task showAlcoholicCocktails()
+        private async void showAlcoholicCocktails()
         {
 
             lvwAlcoholicCocktail.ItemsSource = await CocktailRepo.GetAlcoholicCocktails();
@@ -44,14 +44,13 @@ namespace ProjectDevice
             }
         }
 
-        private async Task testRepo()
+        private async void testRepo()
             {
                  List<Cocktail> cocktails = await CocktailRepo.GetAlcoholicCocktails();
             foreach (var cocktail in cocktails)
             {
                 Debug.WriteLine($"{cocktail.Name} -- {cocktail.Alcoholic} ");
                  }
-
 
 
                  //*Test AddCocktail *//
