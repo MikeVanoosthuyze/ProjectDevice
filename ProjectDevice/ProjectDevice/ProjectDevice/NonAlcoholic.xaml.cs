@@ -22,7 +22,7 @@ namespace ProjectDevice
 
         private async Task showNonAlcoholicCocktails()
         {
-            lvwNonAlcoholicCocktail.ItemsSource = await CocktailRepo.GetNonAlcoholicCocktails();
+            lvwNonAlcoholicCocktail.ItemsSource = await CocktailRepo.GetOwnNonAlcholicCocktails();
         }
 
         private void lvwNonAlcoholicCocktail_ItemSelected(object sender, SelectedItemChangedEventArgs e)
@@ -31,7 +31,7 @@ namespace ProjectDevice
             if (lvwNonAlcoholicCocktail.SelectedItem != null)
             {
                 // object opvragen
-                Cocktail selected = (Cocktail)lvwNonAlcoholicCocktail.SelectedItem;
+                OwnCocktail selected = (OwnCocktail)lvwNonAlcoholicCocktail.SelectedItem;
                 // Naar detail pagina gaan.
                 Navigation.PushAsync(new DetailPage(selected));
                 // oneindige lussen voorkomen

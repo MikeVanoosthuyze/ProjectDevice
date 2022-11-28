@@ -14,11 +14,9 @@ namespace ProjectDevice
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class AddPage : ContentPage
     {
-        public AddPage(OwnCocktail cocktail)
+        public AddPage()
         {
             InitializeComponent();
-
-
         }
 
         private async void Button_Clicked_Add(object sender, EventArgs e)
@@ -57,9 +55,7 @@ namespace ProjectDevice
             newcocktail.Ingredient10 = in10;
 
 
-            await CocktailRepo.AddCocktail(newcocktail); 
-
-
+            await CocktailRepo.AddCocktail(newcocktail);
 
         }
     }

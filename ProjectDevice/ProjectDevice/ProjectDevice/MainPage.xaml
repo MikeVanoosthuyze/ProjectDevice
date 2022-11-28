@@ -11,8 +11,8 @@
 
     <local:Alcoholic Title="Alcholic"/>
     <local:NonAlcoholic Title="Non alcholic"/>
-    <local:AddPage Title="Add drink"/>
-    
+    <local:AddPage Title="Add drink" />
+
 
 
 

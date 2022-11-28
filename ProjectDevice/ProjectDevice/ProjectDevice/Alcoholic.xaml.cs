@@ -35,7 +35,7 @@ namespace ProjectDevice
             if (lvwAlcoholicCocktail.SelectedItem != null)
             {
                 // object opvragen
-                Cocktail selected = (Cocktail)lvwAlcoholicCocktail.SelectedItem;
+                OwnCocktail selected = (OwnCocktail)lvwAlcoholicCocktail.SelectedItem;
                 // Naar detail pagina gaan.
                 Navigation.PushAsync(new DetailPage(selected));
                 // oneindige lussen voorkomen
@@ -46,7 +46,7 @@ namespace ProjectDevice
 
         private async void testRepo()
             {
-                 List<Cocktail> cocktails = await CocktailRepo.GetAlcoholicCocktails();
+                 List<OwnCocktail> cocktails = await CocktailRepo.GetOwnAlcoholicCocktails();
             foreach (var cocktail in cocktails)
             {
                 Debug.WriteLine($"{cocktail.Name} -- {cocktail.Alcoholic} ");
