@@ -21,7 +21,7 @@
                     </Grid.RowDefinitions>
 
 
-                    <ListView x:Name="lvwAlcoholicCocktail" Grid.Row="1" BackgroundColor="#FFF1E4" RowHeight="80" SeparatorColor="Transparent">
+                    <ListView x:Name="lvwAlcoholicCocktail" Grid.Row="1" BackgroundColor="#FFF1E4" RowHeight="80" SeparatorColor="Transparent" ItemSelected="lvwAlcoholicCocktail_ItemSelected">
                         <ListView.ItemTemplate>
                             <DataTemplate>
                                 <ViewCell>
@@ -50,7 +50,7 @@
                             </DataTemplate>
                         </ListView.ItemTemplate>
                     </ListView>
-                    <Label Grid.Row="3" FontAttributes="Bold" BackgroundColor="#BC4B4B" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" TextColor="White" Padding="10" FontSize="Small" Text="ADD DRINK" />
+                    <Label x:Name="lblAddDrink" Grid.Row="3" FontAttributes="Bold" BackgroundColor="#BC4B4B" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" TextColor="White" Padding="10" FontSize="Small" Text="ADD DRINK" />
                 </Grid>
             </Frame>
 

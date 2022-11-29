@@ -18,8 +18,27 @@ namespace ProjectDevice
         public Alcoholic()
         {
             InitializeComponent();
-            showAlcoholicCocktails();
             testRepo();
+
+            /* Gesture Toevoegen aan label */
+            TapGestureRecognizer tapGesture = new TapGestureRecognizer();
+            tapGesture.Tapped += TapGesture_Tapped;
+            lblAddDrink.GestureRecognizers.Add(tapGesture);
+                
+        }
+
+        // Wordt telkens uitgevoerd wanneer pagina terug te voorschijn komt.
+        // Zorgt dat nieuwe kaartjes meteen in het overzicht verschijnene.
+        protected override void OnAppearing()
+        {
+            base.OnAppearing();
+            showAlcoholicCocktails();
+        }
+
+
+        private void TapGesture_Tapped(object sender, EventArgs e)
+        {
+            Navigation.PushAsync(new AddPage());
         }
 
         private async void showAlcoholicCocktails()
@@ -29,7 +48,7 @@ namespace ProjectDevice
         }
 
 
-        /*private void lvwAlcoholicCocktail_ItemSelected(object sender, SelectedItemChangedEventArgs e)
+        private void lvwAlcoholicCocktail_ItemSelected(object sender, SelectedItemChangedEventArgs e)
         {
 
             // nagaan of er wel een object is
@@ -44,7 +63,7 @@ namespace ProjectDevice
 
             }
         }
-*/
+
         private async void testRepo()
             {
 

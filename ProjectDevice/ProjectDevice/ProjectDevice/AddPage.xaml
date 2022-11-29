@@ -14,11 +14,11 @@
                 <Entry x:Name="DrinkAlcoholic" Placeholder="Non Alcoholic/Alcoholic" FontSize="15" Margin="0, 0, 0, 30"></Entry>
 
                 <Label Text="Instructions" TextColor="Black" FontSize="18" Margin="2, 0, 0, 0"></Label>
-                <Entry x:Name="DrinkInstructions" Placeholder="How do you make it?" FontSize="15" Margin="0, 0, 0, 30"></Entry>
+                <Entry x:Name="DrinkInstructions" Keyboard="Text" Placeholder="How do you make it?" FontSize="15" Margin="0, 0, 0, 30"></Entry>
 
 
                 <Label Text="Image" TextColor="Black" FontSize="18" Margin="2, 0, 0, 0"></Label>
-                <Entry x:Name="DrinkImage" Placeholder="url" FontSize="15" Margin="0, 0, 0, 30"></Entry>
+                <Entry x:Name="DrinkImage" Placeholder="url" Keyboard="Url" FontSize="15" Margin="0, 0, 0, 30"></Entry>
 
                 <Label Text="Ingredient 1" TextColor="Black" FontSize="18" Margin="2, 0, 0, 0"></Label>
                 <Entry x:Name="DrinkIngredient1" Placeholder="20 ml Gin" FontSize="15" Margin="0, 0, 0, 30"></Entry>

@@ -22,7 +22,7 @@
                     </Grid.RowDefinitions>
 
 
-                    <ListView x:Name="lvwAlcoholicCocktail" Grid.Row="1" BackgroundColor="#FFF1E4" RowHeight="80" SeparatorColor="Transparent">
+                    <ListView x:Name="lvwNonAlcoholicCocktail" Grid.Row="1" BackgroundColor="#FFF1E4" RowHeight="80" SeparatorColor="Transparent" ItemSelected="lvwNonAlcoholicCocktail_ItemSelected">
                         <ListView.ItemTemplate>
                             <DataTemplate>
                                 <ViewCell>

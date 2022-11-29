@@ -57,6 +57,8 @@ namespace ProjectDevice
 
             await CocktailRepo.AddCocktail(newcocktail);
 
+            Navigation.PopAsync();
+
         }
     }
 }
