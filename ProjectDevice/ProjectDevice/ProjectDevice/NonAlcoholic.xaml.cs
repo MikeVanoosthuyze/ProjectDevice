@@ -20,7 +20,6 @@ namespace ProjectDevice
             InitializeComponent();
             /*testRepo();*/
 
-
             /* Gesture Toevoegen aan label */
             TapGestureRecognizer tapGesture = new TapGestureRecognizer();
             tapGesture.Tapped += TapGesture_Tapped;
