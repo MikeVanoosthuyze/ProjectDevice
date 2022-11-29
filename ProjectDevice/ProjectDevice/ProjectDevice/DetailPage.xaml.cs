@@ -1,4 +1,5 @@
 ﻿using ProjectDevice.Models;
+using ProjectDevice.Repositories;
 using System;
 using System.Collections.Generic;
 using System.Data.SqlTypes;
@@ -16,9 +17,9 @@ namespace ProjectDevice
 
     public partial class DetailPage : ContentPage
     {
+        /*public Cocktail CocktailContent { get; set; }*/
+
         public OwnCocktail CocktailContent { get; set; }
-
-
         public DetailPage(OwnCocktail cocktail)
         {
             InitializeComponent();
@@ -29,6 +30,7 @@ namespace ProjectDevice
         private void showCocktailContent()
         {
 
+            /*CocktailDetail CocktailContent = CocktailRepo.GetAlcoholicDetail(selected.Id);*/
 
             lblTitle.Text = this.CocktailContent.Name;
             lblInstructions.Text = this.CocktailContent.Instructions;
@@ -43,6 +45,7 @@ namespace ProjectDevice
             lblin8.Text = this.CocktailContent.Ingredient8;
             lblin9.Text = this.CocktailContent.Ingredient9;
             lblin10.Text = this.CocktailContent.Ingredient10;
+
 
         }
     }

@@ -22,22 +22,5 @@ namespace ProjectDevice
         {
             InitializeComponent();
         }
-/*        public async Task showCocktails()
-        {
-            
-            
-        }*/
-
-        /*        public static List<BaseClass> GetAllCocktails()
-                {
-
-                    List<BaseClass> results = new List<BaseClass>();
-
-                    results.AddRange(GetOwnCocktails());
-                    results.AddRange(GetCocktails());
-
-                    return results;
-
-                }*/
     }
 }

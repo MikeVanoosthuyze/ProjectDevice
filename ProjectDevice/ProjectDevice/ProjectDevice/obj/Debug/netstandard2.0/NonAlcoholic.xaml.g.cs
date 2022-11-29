@@ -17,12 +17,12 @@ namespace ProjectDevice {
     public partial class NonAlcoholic : global::Xamarin.Forms.ContentPage {
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "2.0.0.0")]
-        private global::Xamarin.Forms.ListView lvwNonAlcoholicCocktail;
+        private global::Xamarin.Forms.ListView lvwAlcoholicCocktail;
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "2.0.0.0")]
         private void InitializeComponent() {
             global::Xamarin.Forms.Xaml.Extensions.LoadFromXaml(this, typeof(NonAlcoholic));
-            lvwNonAlcoholicCocktail = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Xamarin.Forms.ListView>(this, "lvwNonAlcoholicCocktail");
+            lvwAlcoholicCocktail = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Xamarin.Forms.ListView>(this, "lvwAlcoholicCocktail");
         }
     }
 }

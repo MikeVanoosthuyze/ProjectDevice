@@ -5,50 +5,54 @@ using System.Text;
 
 namespace ProjectDevice.Models
 {
-    public class OwnCocktail
+    public class OwnCocktail 
     {
+
         [JsonProperty("id")]
         public string Id { get; set; }
-        [JsonProperty("name")]
+
+        [JsonProperty("strDrink")]
         public string Name { get; set; }
 
-        [JsonProperty("alcoholic")]
+        [JsonProperty("strAlcoholic")]
         public string Alcoholic { get; set; }
 
-        [JsonProperty("instructions")]
+        [JsonProperty("strInstructions")]
         public string Instructions { get; set; }
-        [JsonProperty("image")]
+
+        [JsonProperty("strDrinkThumb")]
         public string Image { get; set; }
 
-        [JsonProperty("ingredient1")]
+        [JsonProperty("strIngredient1")]
         public string Ingredient1 { get; set; }
 
-        [JsonProperty("ingredient2")]
+        [JsonProperty("strIngredient2")]
         public string Ingredient2 { get; set; }
 
-        [JsonProperty("ingredient3")]
+        [JsonProperty("strIngredient3")]
         public string Ingredient3 { get; set; }
 
-        [JsonProperty("ingredient4")]
+        [JsonProperty("strIngredient4")]
         public string Ingredient4 { get; set; }
 
-        [JsonProperty("ingredient5")]
+        [JsonProperty("strIngredient5")]
         public string Ingredient5 { get; set; }
 
-        [JsonProperty("ingredient6")]
+        [JsonProperty("strIngredient6")]
         public string Ingredient6 { get; set; }
 
-        [JsonProperty("ingredient7")]
+        [JsonProperty("strIngredient7")]
         public string Ingredient7 { get; set; }
 
-        [JsonProperty("ingredient8")]
+        [JsonProperty("strIngredient8")]
         public string Ingredient8 { get; set; }
 
-        [JsonProperty("ingredient9")]
+        [JsonProperty("strIngredient9")]
         public string Ingredient9 { get; set; }
 
-        [JsonProperty("ingredient10")]
+        [JsonProperty("strIngredient10")]
         public string Ingredient10 { get; set; }
+
 
 
         public string AmountOfIngredients
@@ -83,9 +87,9 @@ namespace ProjectDevice.Models
                 List<string> InAmount = new List<string>();
 
 
-                foreach(string ingredient in ingredients)
+                foreach (string ingredient in ingredients)
                 {
-                    if(ingredient != null)
+                    if (ingredient != null)
                     {
                         InAmount.Add(ingredient);
                     }

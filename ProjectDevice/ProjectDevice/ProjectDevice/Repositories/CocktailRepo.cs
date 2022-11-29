@@ -9,6 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Runtime.Serialization;
 using Newtonsoft.Json.Linq;
+using System.Diagnostics;
 
 namespace ProjectDevice.Repositories
 {
@@ -17,7 +18,7 @@ namespace ProjectDevice.Repositories
 
         public const string _OWNBASEURL = "https://facocktails.azurewebsites.net/api/";
 
-        public const string _BASEURL = "https://www.thecocktaildb.com/api/json/v1/1/search.php?s";
+        public const string _BASEURL = "https://www.thecocktaildb.com/api/json/v1/1/";
 
         public static HttpClient GetHttpClient()
         {
@@ -30,7 +31,7 @@ namespace ProjectDevice.Repositories
         /*Alcoholic cocktail opvragen*/
         public static async Task<List<Cocktail>> GetAlcoholicCocktails()
         {
-            string url = $"{_BASEURL}";
+            string url = $"{_BASEURL}?search.php?f=a";
 
             using (HttpClient client = GetHttpClient())
             {
@@ -53,13 +54,13 @@ namespace ProjectDevice.Repositories
 
                     foreach (Cocktail cocktail in cocktails)
                     {
-                        if(cocktail.Alcoholic == "Alcoholic")
+                        if (cocktail.Alcoholic == "Alcoholic")
                         {
                             AlcoholicDrinks.Add(cocktail);
                         }
                     }
 
-                    return AlcoholicDrinks;
+                    return cocktails;
                 }
                 catch (Exception ex)
                 {
@@ -73,7 +74,7 @@ namespace ProjectDevice.Repositories
         /*Non Alcoholic cocktail opvragen*/
         public static async Task<List<Cocktail>> GetNonAlcoholicCocktails()
         {
-            string url = $"{_BASEURL}";
+            string url = $"{_BASEURL}?s=";
 
             using (HttpClient client = GetHttpClient())
             {
@@ -96,7 +97,7 @@ namespace ProjectDevice.Repositories
 
                     foreach (Cocktail cocktail in cocktails)
                     {
-                        if (cocktail.Alcoholic != "Alcoholic")
+                        if (cocktail.Alcoholic == "Alcoholic")
                         {
                             AlcoholicDrinks.Add(cocktail);
                         }
@@ -128,7 +129,7 @@ namespace ProjectDevice.Repositories
                     List<OwnCocktail> cocktails = JsonConvert.DeserializeObject<List<OwnCocktail>>(json);
 
 
-                    /* Nieuwe lijst aanmaken */
+                    /*Nieuwe lijst aanmaken*/
                     List<OwnCocktail> AlcoholicDrinks = new List<OwnCocktail>();
 
                     foreach (OwnCocktail cocktail in cocktails)
@@ -170,16 +171,17 @@ namespace ProjectDevice.Repositories
 
 
                     /* Nieuwe lijst aanmaken */
-                    List<OwnCocktail> AlcoholicDrinks = new List<OwnCocktail>();
+                    List<OwnCocktail> NonAlcoholicDrinks = new List<OwnCocktail>();
 
                     foreach (OwnCocktail cocktail in cocktails)
                     {
+                        
                         if (cocktail.Alcoholic != "Alcoholic")
                         {
-                            AlcoholicDrinks.Add(cocktail);
+                            NonAlcoholicDrinks.Add(cocktail);
                         }
                     }
-                    return AlcoholicDrinks;
+                    return NonAlcoholicDrinks;
 
 
 
@@ -219,7 +221,7 @@ namespace ProjectDevice.Repositories
             }
         }
 
-        /**/
+        /*Updaten van Cocktails*/
         public static async Task UpdateCocktail(OwnCocktail item)
         {
             string url = $"{_OWNBASEURL}update/cocktail";
@@ -245,6 +247,21 @@ namespace ProjectDevice.Repositories
                 }
             }
         }
+
+
+
+/*        public static List<Drink> GetAllAlcoholicCocktails()
+        {
+
+
+
+            List<Cocktail> results = new List<Cocktail>();
+            results.AddRange(GetAlcoholicCocktails1());
+            results.AddRange(GetAlcoholicCocktails2());
+
+            return results;
+
+        }*/
 
     }
 }

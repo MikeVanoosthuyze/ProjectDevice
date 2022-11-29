@@ -7,8 +7,9 @@ namespace ProjectDevice.Models
 {
     public class Cocktail
     {
+
         [JsonProperty("idDrink")]
-        public int Id { get; set; }
+        public string Id { get; set; }
 
         [JsonProperty("strDrink")]
         public string Name { get; set; }
@@ -51,10 +52,6 @@ namespace ProjectDevice.Models
 
         [JsonProperty("strIngredient10")]
         public string Ingredient10 { get; set; }
-
-
-
-
 
         [JsonProperty("strMeasure1")]
         public string Measure1 { get; set; }
