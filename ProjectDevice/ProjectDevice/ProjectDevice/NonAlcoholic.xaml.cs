@@ -18,16 +18,26 @@ namespace ProjectDevice
         public NonAlcoholic()
         {
             InitializeComponent();
-            showNonAlcoholicCocktails();
             /*testRepo();*/
 
 
-
-
-
+            /* Gesture Toevoegen aan label */
+            TapGestureRecognizer tapGesture = new TapGestureRecognizer();
+            tapGesture.Tapped += TapGesture_Tapped;
+            lblAddDrink.GestureRecognizers.Add(tapGesture);
 
         }
 
+        protected override void OnAppearing()
+        {
+            base.OnAppearing();
+            showNonAlcoholicCocktails();
+        }
+
+        private void TapGesture_Tapped(object sender, EventArgs e)
+        {
+            Navigation.PushAsync(new AddPage());
+        }
 
         private async Task showNonAlcoholicCocktails()
         {
