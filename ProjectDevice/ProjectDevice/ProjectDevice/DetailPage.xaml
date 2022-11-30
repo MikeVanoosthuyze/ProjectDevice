@@ -5,10 +5,10 @@
 
 
 
-    <Grid BackgroundColor="#FFF1E4">
+    <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="200"/>
-            <RowDefinition Height="500"/>
+            <RowDefinition/>
         </Grid.RowDefinitions>
         <Image x:Name="imgType" Source="" Grid.Row="0" Aspect="AspectFill" />
 
@@ -52,22 +52,9 @@
                 <Label x:Name="lblin8"  Grid.Row="6" Grid.Column="4" Grid.ColumnSpan="4"  Text="(ingredient)" TextColor="black" />
                 <Label x:Name="lblin9"  Grid.Row="7" Grid.ColumnSpan="4" Text="(ingredient)" TextColor="black" />
                 <Label x:Name="lblin10"  Grid.Row="7" Grid.Column="4" Grid.ColumnSpan="4" Text="(ingredient)" TextColor="black" />
-                <Button Text="Back" TextColor="White" CornerRadius="10" BackgroundColor="#BC4B4B" Grid.Row="9" Grid.Column="1" Grid.ColumnSpan="3"/>
-                <Button Text="Edit" TextColor="White" CornerRadius="10" BackgroundColor="#BC4B4B" Grid.Row="9" Grid.Column="4" Grid.ColumnSpan="3"/>
+                <Button x:Name="btn_back" Clicked="btn_back_Clicked"  Text="Back" TextColor="White" CornerRadius="10" BackgroundColor="#BC4B4B" Grid.Row="9" Grid.Column="1" Grid.ColumnSpan="3"/>
+                <Button Text="Edit" TextColor="White" FontAttributes="Bold" CornerRadius="10" BackgroundColor="#BC4B4B" Grid.Row="9" Grid.Column="4" Grid.ColumnSpan="3"/>
             </Grid>
         </Frame>
-
-
-
-
-
-
-
-
-
     </Grid>
-    
-    
-    
-    
 </ContentPage>

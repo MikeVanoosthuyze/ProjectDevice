@@ -50,7 +50,23 @@
                 <Label Text="Ingredient 10" TextColor="Black" FontSize="18" Margin="2, 0, 0, 0"></Label>
                 <Entry x:Name="DrinkIngredient10" Placeholder="20 ml Gin" FontSize="15" Margin="0, 0, 0, 30"></Entry>
 
-                <Button Text="Add drink" BackgroundColor="#BC4B4B" TextColor="White" Clicked="Button_Clicked_Add"></Button>
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                    </Grid.ColumnDefinitions>
+                    <Button x:Name="back_btn" Clicked="back_btn_Clicked" FontAttributes="Bold" Text="Back" Grid.Column="0" Grid.ColumnSpan="3" CornerRadius="10" BackgroundColor="#BC4B4B" TextColor="White"></Button>
+                    <Button Text="Add drink" Grid.Column="3" FontAttributes="Bold" Grid.ColumnSpan="3" CornerRadius="10" BackgroundColor="#BC4B4B" TextColor="White" Clicked="Button_Clicked_Add"></Button>
+                </Grid>
+
+                
             </StackLayout>
         </ScrollView>
     </ContentPage.Content>

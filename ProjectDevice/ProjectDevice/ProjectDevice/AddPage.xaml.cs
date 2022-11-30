@@ -60,5 +60,10 @@ namespace ProjectDevice
             Navigation.PopAsync();
 
         }
+
+        private void back_btn_Clicked(object sender, EventArgs e)
+        {
+            Navigation.PopAsync();
+        }
     }
 }

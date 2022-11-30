@@ -27,6 +27,8 @@ namespace ProjectDevice
             showCocktailContent();
         }
 
+
+
         private void showCocktailContent()
         {
 
@@ -47,6 +49,11 @@ namespace ProjectDevice
             lblin10.Text = this.CocktailContent.Ingredient10;
 
 
+        }
+
+        private void btn_back_Clicked(object sender, EventArgs e)
+        {
+            Navigation.PopAsync();
         }
     }
 
