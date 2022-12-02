@@ -54,8 +54,6 @@ namespace ProjectDevice
 
             lvwAlcoholicCocktail.ItemsSource = results;
 
-
-
         }
 
 
@@ -66,7 +64,7 @@ namespace ProjectDevice
             if (lvwAlcoholicCocktail.SelectedItem != null)
             {
                 // object opvragen
-                Drink selected = (Drink)lvwAlcoholicCocktail.SelectedItem;
+                OwnCocktail selected = (OwnCocktail)lvwAlcoholicCocktail.SelectedItem;
                 // Naar detail pagina gaan.
                 Navigation.PushAsync(new DetailPage(selected));
                 // oneindige lussen voorkomen

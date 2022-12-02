@@ -75,7 +75,7 @@ namespace ProjectDevice.Repositories
         /*Non Alcoholic cocktail opvragen*/
         public static async Task<List<Cocktail>> GetNonAlcoholicCocktails()
         {
-            string url = $"{_BASEURL}?s=";
+            string url = $"{_BASEURL}search.php?f=a";
 
             using (HttpClient client = GetHttpClient())
             {

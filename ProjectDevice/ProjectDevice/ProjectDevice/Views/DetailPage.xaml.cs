@@ -18,10 +18,9 @@ namespace ProjectDevice
 
     public partial class DetailPage : ContentPage
     {
-        /*public Cocktail CocktailContent { get; set; }*/
+        public OwnCocktail CocktailContent { get; set; }
 
-        public Drink CocktailContent { get; set; }
-        public DetailPage(Drink cocktail)
+        public DetailPage(OwnCocktail cocktail)
         {
             InitializeComponent();
             CocktailContent = cocktail;
@@ -57,10 +56,11 @@ namespace ProjectDevice
             Navigation.PopAsync();
         }
 
-/*        private void btn_update_Clicked(object sender, EventArgs e)
+        private void btn_edit_Clicked(object sender, EventArgs e)
         {
             Navigation.PushAsync(new UpdateCocktail(CocktailContent));
-        }*/
+        }
+
     }
 
 }

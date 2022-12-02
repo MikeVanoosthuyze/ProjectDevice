@@ -24,6 +24,7 @@ namespace ProjectDevice
 
         private async void Button_Clicked_Add(object sender, EventArgs e)
         {
+       
             string name = DrinkName.Text;
             string alcoholic = DrinkAlcoholic.Text;
             string instructions = DrinkInstructions.Text;
@@ -38,6 +39,7 @@ namespace ProjectDevice
             string in8 = DrinkIngredient8.Text;
             string in9 = DrinkIngredient9.Text;
             string in10 = DrinkIngredient10.Text;
+
 
 
             OwnCocktail newcocktail = new OwnCocktail();

@@ -8,47 +8,47 @@
                 <Label Text="Add a new drink" TextColor="Black" FontSize="25" Margin=" 0, 0, 0, 30" HorizontalTextAlignment="Center"></Label>
 
                 <Label Text="Name" TextColor="Black" FontSize="18" Margin="2, 0, 0, 0"></Label>
-                <Entry x:Name="DrinkName" Placeholder="Pina colada" FontSize="15"  Margin="0, 0, 0, 15" ></Entry>
+                <Entry x:Name="DrinkName" Text="(name)" FontSize="15"  Margin="0, 0, 0, 15" ></Entry>
 
                 <Label Text="Alcoholic" TextColor="Black" FontSize="18" Margin="2, 0, 0, 0"></Label>
-                <Entry x:Name="DrinkAlcoholic" Placeholder="Non Alcoholic/Alcoholic" FontSize="15" Margin="0, 0, 0, 30"></Entry>
+                <Entry x:Name="DrinkAlcoholic" Text="(Alcoholic)" Placeholder="Non Alcoholic/Alcoholic" FontSize="15" Margin="0, 0, 0, 30"></Entry>
 
                 <Label Text="Instructions" TextColor="Black" FontSize="18" Margin="2, 0, 0, 0"></Label>
-                <Entry x:Name="DrinkInstructions" Keyboard="Text" Placeholder="How do you make it?" FontSize="15" Margin="0, 0, 0, 30"></Entry>
+                <Entry x:Name="DrinkInstructions" Text="(Instructions)"  Keyboard="Text" Placeholder="How do you make it?" FontSize="15" Margin="0, 0, 0, 30"></Entry>
 
 
                 <Label Text="Image" TextColor="Black" FontSize="18" Margin="2, 0, 0, 0"></Label>
-                <Entry x:Name="DrinkImage" Placeholder="url" Keyboard="Url" FontSize="15" Margin="0, 0, 0, 30"></Entry>
+                <Entry x:Name="DrinkImage" Placeholder="url" Text="(Url)" Keyboard="Url" FontSize="15" Margin="0, 0, 0, 30"></Entry>
 
                 <Label Text="Ingredient 1" TextColor="Black" FontSize="18" Margin="2, 0, 0, 0"></Label>
-                <Entry x:Name="DrinkIngredient1" Placeholder="20 ml Gin" FontSize="15" Margin="0, 0, 0, 30"></Entry>
+                <Entry x:Name="DrinkIngredient1" Placeholder="20 ml Gin" Text="(In1)" FontSize="15" Margin="0, 0, 0, 30"></Entry>
 
                 <Label Text="Ingredient 2" TextColor="Black" FontSize="18" Margin="2, 0, 0, 0"></Label>
-                <Entry x:Name="DrinkIngredient2" Placeholder="20 ml Gin" FontSize="15" Margin="0, 0, 0, 30"></Entry>
+                <Entry x:Name="DrinkIngredient2" Placeholder="20 ml Gin" Text="(In2)" FontSize="15" Margin="0, 0, 0, 30"></Entry>
 
                 <Label Text="Ingredient 3" TextColor="Black" FontSize="18" Margin="2, 0, 0, 0"></Label>
-                <Entry x:Name="DrinkIngredient3" Placeholder="20 ml Gin" FontSize="15" Margin="0, 0, 0, 30"></Entry>
+                <Entry x:Name="DrinkIngredient3" Placeholder="20 ml Gin" Text="(In3)" FontSize="15" Margin="0, 0, 0, 30"></Entry>
 
                 <Label Text="Ingredient 4" TextColor="Black" FontSize="18" Margin="2, 0, 0, 0"></Label>
-                <Entry x:Name="DrinkIngredient4" Placeholder="20 ml Gin" FontSize="15" Margin="0, 0, 0, 30"></Entry>
+                <Entry x:Name="DrinkIngredient4" Placeholder="20 ml Gin" Text="(In4)" FontSize="15" Margin="0, 0, 0, 30"></Entry>
 
                 <Label Text="Ingredient 5" TextColor="Black" FontSize="18" Margin="2, 0, 0, 0"></Label>
-                <Entry x:Name="DrinkIngredient5" Placeholder="20 ml Gin" FontSize="15" Margin="0, 0, 0, 30"></Entry>
+                <Entry x:Name="DrinkIngredient5" Placeholder="20 ml Gin" Text="(In5)" FontSize="15" Margin="0, 0, 0, 30"></Entry>
 
                 <Label Text="Ingredient 6" TextColor="Black" FontSize="18" Margin="2, 0, 0, 0"></Label>
-                <Entry x:Name="DrinkIngredient6" Placeholder="20 ml Gin" FontSize="15" Margin="0, 0, 0, 30"></Entry>
+                <Entry x:Name="DrinkIngredient6" Placeholder="20 ml Gin" Text="(In6)" FontSize="15" Margin="0, 0, 0, 30"></Entry>
 
                 <Label Text="Ingredient 7" TextColor="Black" FontSize="18" Margin="2, 0, 0, 0"></Label>
-                <Entry x:Name="DrinkIngredient7" Placeholder="20 ml Gin" FontSize="15" Margin="0, 0, 0, 30"></Entry>
+                <Entry x:Name="DrinkIngredient7" Placeholder="20 ml Gin" Text="(In7)" FontSize="15" Margin="0, 0, 0, 30"></Entry>
 
                 <Label Text="Ingredient 8" TextColor="Black" FontSize="18" Margin="2, 0, 0, 0"></Label>
-                <Entry x:Name="DrinkIngredient8" Placeholder="20 ml Gin" FontSize="15" Margin="0, 0, 0, 30"></Entry>
+                <Entry x:Name="DrinkIngredient8" Placeholder="20 ml Gin" Text="(In8)" FontSize="15" Margin="0, 0, 0, 30"></Entry>
 
                 <Label Text="Ingredient 9" TextColor="Black" FontSize="18" Margin="2, 0, 0, 0"></Label>
-                <Entry x:Name="DrinkIngredient9" Placeholder="20 ml Gin" FontSize="15" Margin="0, 0, 0, 30"></Entry>
+                <Entry x:Name="DrinkIngredient9" Placeholder="20 ml Gin" Text="(In9)" FontSize="15" Margin="0, 0, 0, 30"></Entry>
 
                 <Label Text="Ingredient 10" TextColor="Black" FontSize="18" Margin="2, 0, 0, 0"></Label>
-                <Entry x:Name="DrinkIngredient10" Placeholder="20 ml Gin" FontSize="15" Margin="0, 0, 0, 30"></Entry>
+                <Entry x:Name="DrinkIngredient10" Placeholder="20 ml Gin" Text="(In10)" FontSize="15" Margin="0, 0, 0, 30"></Entry>
 
                 <Grid>
                     <Grid.RowDefinitions>
@@ -62,8 +62,8 @@
                         <ColumnDefinition/>
                         <ColumnDefinition/>
                     </Grid.ColumnDefinitions>
-                    <Button  FontAttributes="Bold" Text="Back" Grid.Column="0" Grid.ColumnSpan="3" CornerRadius="10" BackgroundColor="#BC4B4B" TextColor="White"></Button>
-                    <Button Text="Add drink" Grid.Column="3" FontAttributes="Bold" Grid.ColumnSpan="3" CornerRadius="10" BackgroundColor="#BC4B4B" TextColor="White"></Button>
+                    <Button x:Name="back_btn" Clicked="back_btn_Clicked" FontAttributes="Bold" Text="Back" Grid.Column="0" Grid.ColumnSpan="3" CornerRadius="10" BackgroundColor="#BC4B4B" TextColor="White"></Button>
+                    <Button x:Name="Update_btn" Clicked="Update_btn_Clicked"  Text="Update drink" Grid.Column="3" FontAttributes="Bold" Grid.ColumnSpan="3" CornerRadius="10" BackgroundColor="#BC4B4B" TextColor="White"></Button>
                 </Grid>
 
 
