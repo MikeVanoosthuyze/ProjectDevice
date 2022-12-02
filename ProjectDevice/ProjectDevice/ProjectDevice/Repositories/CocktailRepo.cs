@@ -19,6 +19,7 @@ namespace ProjectDevice.Repositories
         public const string _OWNBASEURL = "https://facocktails.azurewebsites.net/api/";
 
         public const string _BASEURL = "https://www.thecocktaildb.com/api/json/v1/1/";
+        
 
         public static HttpClient GetHttpClient()
         {
@@ -31,7 +32,7 @@ namespace ProjectDevice.Repositories
         /*Alcoholic cocktail opvragen*/
         public static async Task<List<Cocktail>> GetAlcoholicCocktails()
         {
-            string url = $"{_BASEURL}?search.php?f=a";
+            string url = $"{_BASEURL}search.php?f=a";
 
             using (HttpClient client = GetHttpClient())
             {
@@ -249,19 +250,6 @@ namespace ProjectDevice.Repositories
         }
 
 
-
-/*        public static List<Drink> GetAllAlcoholicCocktails()
-        {
-
-
-
-            List<Cocktail> results = new List<Cocktail>();
-            results.AddRange(GetAlcoholicCocktails1());
-            results.AddRange(GetAlcoholicCocktails2());
-
-            return results;
-
-        }*/
 
     }
 }

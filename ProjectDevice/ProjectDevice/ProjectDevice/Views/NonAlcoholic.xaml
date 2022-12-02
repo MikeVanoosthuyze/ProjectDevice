@@ -1,0 +1,64 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ProjectDevice.NonAlcoholic">
+
+
+
+    <Grid BackgroundColor="#FFF1E4">
+        <Grid.RowDefinitions>
+            <RowDefinition />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+
+        <StackLayout>
+            <Frame BackgroundColor="#FFF1E4" Margin="8" Padding="0" CornerRadius="10" BorderColor="Transparent">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="20"/>
+                        <RowDefinition Height="500"/>
+                        <RowDefinition Height="30"/>
+                    </Grid.RowDefinitions>
+
+
+                    <ListView x:Name="lvwNonAlcoholicCocktail" Grid.Row="1" BackgroundColor="#FFF1E4" RowHeight="80" SeparatorColor="Transparent" ItemSelected="lvwNonAlcoholicCocktail_ItemSelected">
+                        <ListView.ItemTemplate>
+                            <DataTemplate>
+                                <ViewCell>
+                                    <Frame BackgroundColor="White" Padding="8,0" Margin="8" CornerRadius="10">
+                                        <Grid>
+                                            <Grid.RowDefinitions>
+                                                <RowDefinition />
+                                                <RowDefinition Height="18" />
+                                            </Grid.RowDefinitions>
+
+                                            <Grid.ColumnDefinitions>
+                                                <ColumnDefinition Width="35"/>
+                                            </Grid.ColumnDefinitions>
+
+                                            <Image Source="{Binding Image}" Grid.RowSpan="2" Grid.ColumnSpan="2"/>
+                                            <Label Text="{Binding Name}" Grid.Column="2" Grid.Row="0" Grid.ColumnSpan="5"  VerticalOptions="Center" TextColor="black" />
+                                            <!-- Put -->
+                                            <StackLayout Grid.Column="2" Grid.Row="1" Grid.ColumnSpan="5" Orientation="Horizontal">
+                                                <!--<Image Source="http://www.iconsdb.com/icons/preview/gray/comments-xxl.png" VerticalOptions="Center" HeightRequest="9"  />-->
+                                                <Label FontSize="Caption" Text="{Binding AmountOfIngredients}" />
+                                                <Label  TextColor="Gray" FontSize="Micro"  VerticalOptions="Start" />
+                                            </StackLayout>
+                                        </Grid>
+                                    </Frame>
+                                </ViewCell>
+                            </DataTemplate>
+                        </ListView.ItemTemplate>
+                    </ListView>
+                    <Label x:Name="lblAddDrink" Grid.Row="3" FontAttributes="Bold" BackgroundColor="#BC4B4B" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" TextColor="White" Padding="10" FontSize="Small" Text="ADD DRINK" />
+                </Grid>
+            </Frame>
+
+        </StackLayout>
+    </Grid>
+ 
+
+
+
+</ContentPage>

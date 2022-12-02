@@ -5,16 +5,14 @@ using System.Text;
 
 namespace ProjectDevice.Models
 {
-    public class Cocktail
+    public class Cocktail : Drink
     {
 
         [JsonProperty("idDrink")]
         public string Id { get; set; }
 
-        [JsonProperty("strDrink")]
-        public string Name { get; set; }
 
-        [JsonProperty("strAlcoholic")]
+/*        [JsonProperty("strAlcoholic")]
         public string Alcoholic { get; set; }
 
         [JsonProperty("strInstructions")]
@@ -51,7 +49,9 @@ namespace ProjectDevice.Models
         public string Ingredient9 { get; set; }
 
         [JsonProperty("strIngredient10")]
-        public string Ingredient10 { get; set; }
+        public string Ingredient10 { get; set; }*/
+
+
 
         [JsonProperty("strMeasure1")]
         public string Measure1 { get; set; }
