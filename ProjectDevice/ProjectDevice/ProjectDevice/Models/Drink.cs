@@ -7,6 +7,8 @@ namespace ProjectDevice.Models
 {
     public class Drink
     {
+
+
         [JsonProperty("strDrink")]
         public string Name { get; set; }
 

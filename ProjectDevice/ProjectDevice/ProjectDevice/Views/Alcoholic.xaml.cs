@@ -6,9 +6,10 @@ using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
+using Xamarin.Essentials;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
+using static Xamarin.Essentials.Permissions;
 
 namespace ProjectDevice
 {
@@ -18,8 +19,8 @@ namespace ProjectDevice
         public Alcoholic()
         {
             InitializeComponent();
-            testRepo();
 
+            testRepo();
             /* Gesture Toevoegen aan label */
             TapGestureRecognizer tapGesture = new TapGestureRecognizer();
             tapGesture.Tapped += TapGesture_Tapped;
@@ -46,16 +47,17 @@ namespace ProjectDevice
 
             /*lvwAlcoholicCocktail.ItemsSource = await CocktailRepo.GetOwnAlcoholicCocktails();*/
 
-            List<Drink> results = new List<Drink>();
-            List<OwnCocktail> list1 = await CocktailRepo.GetOwnAlcoholicCocktails();
-            List<Cocktail> list2 = await CocktailRepo.GetAlcoholicCocktails();
-            results.AddRange(list1);
-            results.AddRange(list2);
 
-            lvwAlcoholicCocktail.ItemsSource = results;
+
+                List<Drink> results = new List<Drink>();
+                List<OwnCocktail> list1 = await CocktailRepo.GetOwnAlcoholicCocktails();
+                List<Cocktail> list2 = await CocktailRepo.GetAlcoholicCocktails();
+                results.AddRange(list1);
+                results.AddRange(list2);
+
+                lvwAlcoholicCocktail.ItemsSource = results;
 
         }
-
 
         private void lvwAlcoholicCocktail_ItemSelected(object sender, SelectedItemChangedEventArgs e)
         {
@@ -64,11 +66,13 @@ namespace ProjectDevice
             if (lvwAlcoholicCocktail.SelectedItem != null)
             {
                 // object opvragen
-                OwnCocktail selected = (OwnCocktail)lvwAlcoholicCocktail.SelectedItem;
+                Drink selected = (Drink)lvwAlcoholicCocktail.SelectedItem;
                 // Naar detail pagina gaan.
                 Navigation.PushAsync(new DetailPage(selected));
-                // oneindige lussen voorkomen
+                // oneindige lussen voorkome
                 lvwAlcoholicCocktail.SelectedItem = selected;
+                /*lvwAlcoholicCocktail.SelectedItem = selected2;*/
+
 
             }
         }
@@ -113,25 +117,5 @@ namespace ProjectDevice
 
 
         }
-
-        //public async static List<Drink> GetAllAlcoholicCocktails()
-        //{
-
-
-
-        //    List<Drink> results = new List<Drink>();
-
-        //    List < OwnCocktail > list1 = await CocktailRepo.GetOwnAlcoholicCocktails();
-
-        //    List<Cocktail> list2 = await CocktailRepo.GetAlcoholicCocktails();
-
-
-
-        //    results.AddRange(list1);
-        //    results.AddRange(list2);
-
-        //    return results;
-
-        //}
     }
 }

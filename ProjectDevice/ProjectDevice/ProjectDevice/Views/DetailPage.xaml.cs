@@ -18,37 +18,65 @@ namespace ProjectDevice
 
     public partial class DetailPage : ContentPage
     {
-        public OwnCocktail CocktailContent { get; set; }
+        public Drink OwnContent { get; set; }
 
-        public DetailPage(OwnCocktail cocktail)
+        public DetailPage(Drink cocktail)
         {
             InitializeComponent();
-            CocktailContent = cocktail;
-            showCocktailContent();
+            OwnContent = cocktail;
+            
+            if ((OwnContent as OwnCocktail) != null)
+            {
+                OwnCocktail item = (OwnCocktail)OwnContent;
+                showOwnCocktailContent(item);
+            }
+            if ((OwnContent as Cocktail) != null)
+            {
+                Cocktail item = (Cocktail)OwnContent;
+                showCocktailContent(item);
+            }
+
+
         }
 
+        private void showCocktailContent(Cocktail item)
+        {
 
 
-        private void showCocktailContent()
+            /*Objecten van Cocktail*/
+            lblTitle.Text = item.Name;
+            lblInstructions.Text = item.Instructions;
+            imgType.Source = item.Image;
+            lblin1.Text = item.Ingredient1Measure;
+            lblin2.Text = item.Ingredient2Measure;
+            lblin3.Text = item.Ingredient3Measure;
+            lblin4.Text = item.Ingredient4Measure;
+            lblin5.Text = item.Ingredient5Measure;
+            lblin6.Text = item.Ingredient6Measure;
+            lblin7.Text = item.Ingredient7Measure;
+            lblin8.Text = item.Ingredient8Measure;
+            lblin9.Text = item.Ingredient9Measure;
+            lblin10.Text = item.Ingredient10Measure;
+        }
+
+        private void showOwnCocktailContent(OwnCocktail item)
         {
 
             /*CocktailDetail CocktailContent = CocktailRepo.GetAlcoholicDetail(selected.Id);*/
 
-            lblTitle.Text = this.CocktailContent.Name;
-            lblInstructions.Text = this.CocktailContent.Instructions;
-            imgType.Source = this.CocktailContent.Image;
-            lblin1.Text = this.CocktailContent.Ingredient1;
-            lblin2.Text = this.CocktailContent.Ingredient2;
-            lblin3.Text = this.CocktailContent.Ingredient3;
-            lblin4.Text = this.CocktailContent.Ingredient4;
-            lblin5.Text = this.CocktailContent.Ingredient5;
-            lblin6.Text = this.CocktailContent.Ingredient6;
-            lblin7.Text = this.CocktailContent.Ingredient7;
-            lblin8.Text = this.CocktailContent.Ingredient8;
-            lblin9.Text = this.CocktailContent.Ingredient9;
-            lblin10.Text = this.CocktailContent.Ingredient10;
-
-
+                /* Objecten van OwnCocktail */
+                lblTitle.Text = item.Name;
+                lblInstructions.Text = item.Instructions;
+                imgType.Source = item.Image;
+                lblin1.Text = item.Ingredient1;
+                lblin2.Text = item.Ingredient2;
+                lblin3.Text = item.Ingredient3;
+                lblin4.Text = item.Ingredient5;
+                lblin6.Text = item.Ingredient6;
+                lblin7.Text = item.Ingredient7;
+                lblin8.Text = item.Ingredient8;
+                lblin9.Text = item.Ingredient9;
+                lblin10.Text = item.Ingredient10;
         }
 
         private void btn_back_Clicked(object sender, EventArgs e)
@@ -58,7 +86,7 @@ namespace ProjectDevice
 
         private void btn_edit_Clicked(object sender, EventArgs e)
         {
-            Navigation.PushAsync(new UpdateCocktail(CocktailContent));
+            Navigation.PushAsync(new UpdateCocktail((OwnCocktail)OwnContent));
         }
 
     }

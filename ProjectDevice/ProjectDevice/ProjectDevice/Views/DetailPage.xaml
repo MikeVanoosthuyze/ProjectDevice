@@ -5,7 +5,7 @@
 
 
 
-    <Grid>
+    <Grid BackgroundColor="#FFF1E4">
         <Grid.RowDefinitions>
             <RowDefinition Height="200"/>
             <RowDefinition/>

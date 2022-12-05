@@ -16,7 +16,7 @@ namespace ProjectDevice.Views
     public partial class UpdateCocktail : ContentPage
     {
         public OwnCocktail CocktailContent { get; set; }
-        public UpdateCocktail(OwnCocktail  content)
+        public UpdateCocktail(OwnCocktail content)
         {
             InitializeComponent();
             CocktailContent = content;
@@ -26,6 +26,8 @@ namespace ProjectDevice.Views
 
         private void Showdata()
         {
+
+            
             DrinkName.Text = this.CocktailContent.Name;
             DrinkAlcoholic.Text = this.CocktailContent.Alcoholic;
             DrinkInstructions.Text = this.CocktailContent.Instructions;
@@ -51,7 +53,7 @@ namespace ProjectDevice.Views
         private async void Update_btn_Clicked(object sender, EventArgs e)
         {
 
-            string id = this.CocktailContent.Id;
+            string id = CocktailContent.Id;
             string name = DrinkName.Text;
             string alcoholic = DrinkAlcoholic.Text;
             string instructions = DrinkInstructions.Text;

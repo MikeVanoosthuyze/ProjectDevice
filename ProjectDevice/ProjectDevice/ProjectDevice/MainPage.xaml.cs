@@ -10,9 +10,11 @@ using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 using Xamarin.Forms;
+using Xamarin.Essentials;
 using Xamarin.Forms.PlatformConfiguration.iOSSpecific;
 using static System.Net.Mime.MediaTypeNames;
 using TabbedPage = Xamarin.Forms.TabbedPage;
+using static Xamarin.Essentials.Permissions;
 
 namespace ProjectDevice
 {

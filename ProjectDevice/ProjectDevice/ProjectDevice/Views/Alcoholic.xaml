@@ -3,6 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="ProjectDevice.Alcoholic">
 
+    
 
     <Grid BackgroundColor="#FFF1E4">
         <Grid.RowDefinitions>

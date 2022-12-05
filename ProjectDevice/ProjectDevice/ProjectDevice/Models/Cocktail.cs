@@ -12,47 +12,6 @@ namespace ProjectDevice.Models
         public string Id { get; set; }
 
 
-/*        [JsonProperty("strAlcoholic")]
-        public string Alcoholic { get; set; }
-
-        [JsonProperty("strInstructions")]
-        public string Instructions { get; set; }
-
-        [JsonProperty("strDrinkThumb")]
-        public string Image { get; set; }
-
-        [JsonProperty("strIngredient1")]
-        public string Ingredient1 { get; set; }
-
-        [JsonProperty("strIngredient2")]
-        public string Ingredient2 { get; set; }
-
-        [JsonProperty("strIngredient3")]
-        public string Ingredient3 { get; set; }
-
-        [JsonProperty("strIngredient4")]
-        public string Ingredient4 { get; set; }
-
-        [JsonProperty("strIngredient5")]
-        public string Ingredient5 { get; set; }
-
-        [JsonProperty("strIngredient6")]
-        public string Ingredient6 { get; set; }
-
-        [JsonProperty("strIngredient7")]
-        public string Ingredient7 { get; set; }
-
-        [JsonProperty("strIngredient8")]
-        public string Ingredient8 { get; set; }
-
-        [JsonProperty("strIngredient9")]
-        public string Ingredient9 { get; set; }
-
-        [JsonProperty("strIngredient10")]
-        public string Ingredient10 { get; set; }*/
-
-
-
         [JsonProperty("strMeasure1")]
         public string Measure1 { get; set; }
 
@@ -134,7 +93,7 @@ namespace ProjectDevice.Models
 
         }
 
-        public string ingredient1Measure
+        public string Ingredient1Measure
         {
             get
             {
@@ -142,7 +101,7 @@ namespace ProjectDevice.Models
             }
         }
 
-        public string ingredient2Measure
+        public string Ingredient2Measure
         {
             get
             {
@@ -150,7 +109,7 @@ namespace ProjectDevice.Models
             }
         }
 
-        public string ingredient3Measure
+        public string Ingredient3Measure
         {
             get
             {
@@ -158,7 +117,7 @@ namespace ProjectDevice.Models
             }
         }
 
-        public string ingredient4Measure
+        public string Ingredient4Measure
         {
             get
             {
@@ -166,7 +125,7 @@ namespace ProjectDevice.Models
             }
         }
 
-        public string ingredient5Measure
+        public string Ingredient5Measure
         {
             get
             {
@@ -174,7 +133,7 @@ namespace ProjectDevice.Models
             }
         }
 
-        public string ingredient6Measure
+        public string Ingredient6Measure
         {
             get
             {
@@ -182,7 +141,7 @@ namespace ProjectDevice.Models
             }
         }
 
-        public string ingredient7Measure
+        public string Ingredient7Measure
         {
             get
             {
@@ -190,7 +149,7 @@ namespace ProjectDevice.Models
             }
         }
 
-        public string ingredient8Measure
+        public string Ingredient8Measure
         {
             get
             {
@@ -198,7 +157,7 @@ namespace ProjectDevice.Models
             }
         }
 
-        public string ingredient9Measure
+        public string Ingredient9Measure
         {
             get
             {
@@ -206,7 +165,7 @@ namespace ProjectDevice.Models
             }
         }
 
-        public string ingredient10Measure
+        public string Ingredient10Measure
         {
             get
             {

@@ -11,10 +11,6 @@ namespace ProjectDevice.Models
         [JsonProperty("id")]
         public string Id { get; set; }
 
-/*        [JsonProperty("strDrink")]
-        public string Name { get; set; }*/
-
-
         public string AmountOfIngredients
         {
             get
@@ -62,8 +58,6 @@ namespace ProjectDevice.Models
             }
 
         }
-
-
 
     }
 }

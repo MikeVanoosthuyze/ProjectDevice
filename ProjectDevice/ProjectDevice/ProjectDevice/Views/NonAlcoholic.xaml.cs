@@ -50,6 +50,7 @@ namespace ProjectDevice
             {
                 // object opvragen
                 OwnCocktail selected = (OwnCocktail)lvwNonAlcoholicCocktail.SelectedItem;
+                /*Cocktail selected2 = (Cocktail)lvwNonAlcoholicCocktail.SelectedItem;*/
                 // Naar detail pagina gaan.
                 Navigation.PushAsync(new DetailPage(selected));
                 // oneindige lussen voorkomen
