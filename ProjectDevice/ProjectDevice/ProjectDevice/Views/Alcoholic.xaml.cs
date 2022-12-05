@@ -72,8 +72,6 @@ namespace ProjectDevice
                 // oneindige lussen voorkome
                 lvwAlcoholicCocktail.SelectedItem = selected;
                 /*lvwAlcoholicCocktail.SelectedItem = selected2;*/
-
-
             }
         }
 

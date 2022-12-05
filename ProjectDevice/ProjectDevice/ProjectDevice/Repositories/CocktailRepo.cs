@@ -54,7 +54,9 @@ namespace ProjectDevice.Repositories
 
                     foreach (Cocktail cocktail in cocktails)
                     {
-                        if (cocktail.Alcoholic == "Alcoholic")
+                        string alcoholic = cocktail.Alcoholic.ToLower();
+
+                        if (alcoholic == "alcoholic" || alcoholic == "optional alcohol")
                         {
                             AlcoholicDrinks.Add(cocktail);
                         }
@@ -97,7 +99,9 @@ namespace ProjectDevice.Repositories
 
                     foreach (Cocktail cocktail in cocktails)
                     {
-                        if (cocktail.Alcoholic == "Alcoholic")
+                        string alcoholic = cocktail.Alcoholic.ToLower();
+                        
+                        if (alcoholic == "non alcoholic")
                         {
                             AlcoholicDrinks.Add(cocktail);
                         }
@@ -134,7 +138,9 @@ namespace ProjectDevice.Repositories
 
                     foreach (OwnCocktail cocktail in cocktails)
                     {
-                        if (cocktail.Alcoholic == "Alcoholic")
+                        string alcoholic = cocktail.Alcoholic.ToLower();
+
+                        if (alcoholic == "alcoholic")
                         {
                             AlcoholicDrinks.Add(cocktail);
                         }
@@ -175,8 +181,9 @@ namespace ProjectDevice.Repositories
 
                     foreach (OwnCocktail cocktail in cocktails)
                     {
-                        
-                        if (cocktail.Alcoholic != "Alcoholic")
+                        string alcoholic = cocktail.Alcoholic.ToLower();
+
+                        if (alcoholic == "non alcoholic")
                         {
                             NonAlcoholicDrinks.Add(cocktail);
                         }
