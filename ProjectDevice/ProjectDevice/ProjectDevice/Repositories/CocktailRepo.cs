@@ -54,9 +54,8 @@ namespace ProjectDevice.Repositories
 
                     foreach (Cocktail cocktail in cocktails)
                     {
-                        string alcoholic = cocktail.Alcoholic.ToLower();
-
-                        if (alcoholic == "alcoholic" || alcoholic == "optional alcohol")
+                        
+                        if (cocktail.Alcoholic == "Alcoholic")
                         {
                             AlcoholicDrinks.Add(cocktail);
                         }
@@ -95,19 +94,18 @@ namespace ProjectDevice.Repositories
                     List<Cocktail> cocktails = data.ToObject<List<Cocktail>>();
 
                     /* Nieuwe lijst aanmaken */
-                    List<Cocktail> AlcoholicDrinks = new List<Cocktail>();
+                    List<Cocktail> NonAlcoholicDrinks = new List<Cocktail>();
 
                     foreach (Cocktail cocktail in cocktails)
                     {
-                        string alcoholic = cocktail.Alcoholic.ToLower();
                         
-                        if (alcoholic == "non alcoholic")
+                        if (cocktail.Alcoholic == "Non alcoholic")
                         {
-                            AlcoholicDrinks.Add(cocktail);
+                            NonAlcoholicDrinks.Add(cocktail);
                         }
                     }
 
-                    return AlcoholicDrinks;
+                    return NonAlcoholicDrinks;
                 }
                 catch (Exception ex)
                 {
@@ -117,6 +115,7 @@ namespace ProjectDevice.Repositories
             }
 
         }
+
 
         /*Alcoholic OwnCocktails opvragen*/
         public static async Task<List<OwnCocktail>> GetOwnAlcoholicCocktails()
@@ -138,9 +137,8 @@ namespace ProjectDevice.Repositories
 
                     foreach (OwnCocktail cocktail in cocktails)
                     {
-                        string alcoholic = cocktail.Alcoholic.ToLower();
-
-                        if (alcoholic == "alcoholic")
+                     
+                        if (cocktail.Alcoholic == "alcoholic" || cocktail.Alcoholic == "Alcoholic")
                         {
                             AlcoholicDrinks.Add(cocktail);
                         }
@@ -181,9 +179,8 @@ namespace ProjectDevice.Repositories
 
                     foreach (OwnCocktail cocktail in cocktails)
                     {
-                        string alcoholic = cocktail.Alcoholic.ToLower();
-
-                        if (alcoholic == "non alcoholic")
+                   
+                        if (cocktail.Alcoholic == "non alcoholic" || cocktail.Alcoholic == "Non alcoholic")
                         {
                             NonAlcoholicDrinks.Add(cocktail);
                         }
@@ -201,6 +198,12 @@ namespace ProjectDevice.Repositories
             }
 
         }
+
+
+
+
+
+
 
         /*Cocktails toevoegen*/
         public static async Task AddCocktail(OwnCocktail item)

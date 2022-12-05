@@ -18,3 +18,4 @@ C:\DEVPROG\ProjectDevice\ProjectDevice\ProjectDevice\ProjectDevice\obj\Debug\net
 C:\DEVPROG\ProjectDevice\ProjectDevice\ProjectDevice\ProjectDevice\obj\Debug\netstandard2.0\Views\DetailPage.xaml.g.cs
 C:\DEVPROG\ProjectDevice\ProjectDevice\ProjectDevice\ProjectDevice\obj\Debug\netstandard2.0\Views\NonAlcoholic.xaml.g.cs
 C:\DEVPROG\ProjectDevice\ProjectDevice\ProjectDevice\ProjectDevice\obj\Debug\netstandard2.0\Views\UpdateCocktail.xaml.g.cs
+C:\DEVPROG\ProjectDevice\ProjectDevice\ProjectDevice\ProjectDevice\obj\Debug\netstandard2.0\Views\NoNetworkPage.xaml.g.cs

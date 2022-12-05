@@ -42,16 +42,16 @@
                 <Label Grid.ColumnSpan="8" Grid.Row="1" x:Name="lblInstructions" Text="(instructions)" TextColor="black"/>
 
                 <Label Text="Ingredients:" Grid.Row="2" Grid.ColumnSpan="6" TextColor="Brown" FontSize="Medium"/>
-                <Label x:Name="lblin1" Grid.Row="3" Grid.ColumnSpan="4" Text="(ingredient)" TextColor="black" />
-                <Label x:Name="lblin2" Grid.Row="3" Grid.Column="4" Grid.ColumnSpan="4"  Text="(ingredient)" TextColor="black" />
-                <Label x:Name="lblin3" Grid.Row="4" Grid.ColumnSpan="4"  Text="(ingredient)" TextColor="black" />
-                <Label x:Name="lblin4" Grid.Row="4" Grid.Column="4" Grid.ColumnSpan="4"  Text="(ingredient)" TextColor="black" />
-                <Label x:Name="lblin5" Grid.Row="5" Grid.ColumnSpan="4"  Text="(ingredient)" TextColor="black" />
-                <Label x:Name="lblin6"  Grid.Row="5" Grid.Column="4" Grid.ColumnSpan="4"  Text="(ingredient)" TextColor="black" />
-                <Label x:Name="lblin7"  Grid.Row="6" Grid.ColumnSpan="4"  Text="(ingredient)" TextColor="black" />
-                <Label x:Name="lblin8"  Grid.Row="6" Grid.Column="4" Grid.ColumnSpan="4"  Text="(ingredient)" TextColor="black" />
-                <Label x:Name="lblin9"  Grid.Row="7" Grid.ColumnSpan="4" Text="(ingredient)" TextColor="black" />
-                <Label x:Name="lblin10"  Grid.Row="7" Grid.Column="4" Grid.ColumnSpan="4" Text="(ingredient)" TextColor="black" />
+                <Label x:Name="lblin1" Grid.Row="3" Grid.ColumnSpan="4" TextColor="black" />
+                <Label x:Name="lblin2" Grid.Row="3" Grid.Column="4" Grid.ColumnSpan="4" TextColor="black" />
+                <Label x:Name="lblin3" Grid.Row="4" Grid.ColumnSpan="4"   TextColor="black" />
+                <Label x:Name="lblin4" Grid.Row="4" Grid.Column="4" Grid.ColumnSpan="4" TextColor="black" />
+                <Label x:Name="lblin5" Grid.Row="5" Grid.ColumnSpan="4"   TextColor="black" />
+                <Label x:Name="lblin6"  Grid.Row="5" Grid.Column="4" Grid.ColumnSpan="4" TextColor="black" />
+                <Label x:Name="lblin7"  Grid.Row="6" Grid.ColumnSpan="4"   TextColor="black" />
+                <Label x:Name="lblin8"  Grid.Row="6" Grid.Column="4" Grid.ColumnSpan="4" TextColor="black" />
+                <Label x:Name="lblin9"  Grid.Row="7" Grid.ColumnSpan="4"  TextColor="black" />
+                <Label x:Name="lblin10"  Grid.Row="7" Grid.Column="4" Grid.ColumnSpan="4" TextColor="black" />
                 <Button x:Name="btn_back" Clicked="btn_back_Clicked"  Text="Back" TextColor="White" CornerRadius="10" BackgroundColor="#BC4B4B" Grid.Row="9" Grid.Column="1" Grid.ColumnSpan="3"/>
                 <Button x:Name="btn_edit" Clicked="btn_edit_Clicked" Text="Edit" TextColor="White" FontAttributes="Bold" CornerRadius="10" BackgroundColor="#BC4B4B" Grid.Row="9" Grid.Column="4" Grid.ColumnSpan="3"/>
             </Grid>
