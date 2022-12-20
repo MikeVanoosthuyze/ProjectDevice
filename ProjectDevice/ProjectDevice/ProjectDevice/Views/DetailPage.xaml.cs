@@ -18,21 +18,21 @@ namespace ProjectDevice
 
     public partial class DetailPage : ContentPage
     {
-        public Drink OwnContent { get; set; }
+        public Drink Content { get; set; }
 
         public DetailPage(Drink cocktail)
         {
             InitializeComponent();
-            OwnContent = cocktail;
+            Content = cocktail;
             
-            if ((OwnContent as OwnCocktail) != null)
+            if ((Content as OwnCocktail) != null)
             {
-                OwnCocktail item = (OwnCocktail)OwnContent;
+                OwnCocktail item = (OwnCocktail)Content;
                 showOwnCocktailContent(item);
             }
-            if ((OwnContent as Cocktail) != null)
+            if ((Content as Cocktail) != null)
             {
-                Cocktail item = (Cocktail)OwnContent;
+                Cocktail item = (Cocktail)Content;
                 showCocktailContent(item);
             }
 
@@ -57,6 +57,10 @@ namespace ProjectDevice
             lblin8.Text = item.Ingredient8Measure;
             lblin9.Text = item.Ingredient9Measure;
             lblin10.Text = item.Ingredient10Measure;
+
+            btn_edit.IsEnabled = false;
+            btn_edit.BackgroundColor = Color.LightGray;
+            btn_edit.TextColor = Color.Gray;
         }
 
         private void showOwnCocktailContent(OwnCocktail item)
@@ -86,7 +90,7 @@ namespace ProjectDevice
 
         private void btn_edit_Clicked(object sender, EventArgs e)
         {
-            Navigation.PushAsync(new UpdateCocktail((OwnCocktail)OwnContent));
+            Navigation.PushAsync(new UpdateCocktail((OwnCocktail)Content));
         }
 
     }
