@@ -3,7 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="ProjectDevice.DetailPage">
 
-
+    <ScrollView>
 
     <Grid BackgroundColor="#FFF1E4">
         <Grid.RowDefinitions>
@@ -16,7 +16,7 @@
             <Grid>
                 <Grid.RowDefinitions>
                     <RowDefinition Height="40"/>
-                    <RowDefinition Height="120"/>
+                    <RowDefinition />
                     <RowDefinition Height="40"/>
                     <RowDefinition Height="40"/>
                     <RowDefinition Height="40"/>
@@ -38,8 +38,8 @@
                     <ColumnDefinition/>
                 </Grid.ColumnDefinitions>
 
-                <Label Grid.ColumnSpan="8" Grid.Row="0" x:Name="lblTitle" Text="(title)" TextColor="brown" FontSize="Large"/>
-                <Label Grid.ColumnSpan="8" Grid.Row="1" x:Name="lblInstructions" Text="(instructions)" TextColor="black"/>
+                    <Label x:Name="lblTitle"  Grid.ColumnSpan="8" Grid.Row="0" Text="(title)" TextColor="brown" FontSize="Large"/>
+                    <Label x:Name="lblInstructions" Grid.ColumnSpan="8" Grid.Row="1"  Text="(instructions)" TextColor="black"/>
 
                 <Label Text="Ingredients:" Grid.Row="2" Grid.ColumnSpan="6" TextColor="Brown" FontSize="Medium"/>
                 <Label x:Name="lblin1" Grid.Row="3" Grid.ColumnSpan="4" TextColor="black" />
@@ -57,4 +57,5 @@
             </Grid>
         </Frame>
     </Grid>
+    </ScrollView>
 </ContentPage>
