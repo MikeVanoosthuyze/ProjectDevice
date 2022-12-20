@@ -72,6 +72,27 @@ namespace ProjectDevice.Views
 
             OwnCocktail Updatecocktail = new OwnCocktail();
 
+            if (string.IsNullOrEmpty(DrinkName.Text))
+            {
+                await DisplayAlert("Error!", "Fill in the name of the drink", "OK");
+                return;
+            }
+            if (string.IsNullOrEmpty(DrinkAlcoholic.Text))
+            {
+                await DisplayAlert("Error!", "Fill in if the drink is Alcoholic or Non Alcoholic!", "OK");
+                return;
+            }
+            if (string.IsNullOrEmpty(DrinkInstructions.Text))
+            {
+                await DisplayAlert("Error!", "Fill in the instructions to make!", "OK");
+                return;
+            }
+            if (string.IsNullOrEmpty(DrinkIngredient1.Text))
+            {
+                await DisplayAlert("Error!", "Enter at least 1 ingredient", "OK");
+                return;
+            }
+
 
             Updatecocktail.Id = id;
             Updatecocktail.Name = name;

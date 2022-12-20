@@ -59,7 +59,7 @@ namespace ProjectDevice
 
             foreach (Drink item in mixedList)
             {
-                if (item.Alcoholic == "Alcoholic")
+                if (item.Alcoholic.ToLower() == "alcoholic")
                 {
                     /*Debug.WriteLine($"{item.Name} -- {item.Alcoholic}");*/
                     filteredList.Add(item);

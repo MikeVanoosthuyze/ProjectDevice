@@ -41,8 +41,31 @@ namespace ProjectDevice
             string in10 = DrinkIngredient10.Text;
 
 
-
             OwnCocktail newcocktail = new OwnCocktail();
+
+
+
+            if (string.IsNullOrEmpty(DrinkName.Text))
+            {
+                await DisplayAlert("Error!", "Fill in the name of the drink", "OK");
+                return;
+            }
+            if (string.IsNullOrEmpty(DrinkAlcoholic.Text))
+            {
+                await DisplayAlert("Error!", "Fill in if the drink is Alcoholic or Non Alcoholic!", "OK");
+                return;
+            }
+            if (string.IsNullOrEmpty(DrinkInstructions.Text))
+            {
+                await DisplayAlert("Error!", "Fill in the instructions to make!", "OK");
+                return;
+            }
+            if (string.IsNullOrEmpty(DrinkIngredient1.Text))
+            {
+                await DisplayAlert("Error!", "Enter at least 1 ingredient", "OK");
+                return;
+            }
+
 
             newcocktail.Name = name;
             newcocktail.Alcoholic = alcoholic;
@@ -66,9 +89,10 @@ namespace ProjectDevice
 
         }
 
-        private void back_btn_Clicked(object sender, EventArgs e)
+        private async void back_btn_Clicked(object sender, EventArgs e)
         {
-            Navigation.PopAsync();
+                Navigation.PopAsync();  
+ 
         }
     }
 }
