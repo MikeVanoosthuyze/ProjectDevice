@@ -36,12 +36,10 @@ namespace ProjectDevice
                 showCocktailContent(item);
             }
 
-
         }
 
         private void showCocktailContent(Cocktail item)
         {
-
 
             /*Objecten van Cocktail*/
             lblTitle.Text = item.Name;

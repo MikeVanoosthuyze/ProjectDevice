@@ -5,12 +5,13 @@
              BarBackground="#BC4B4B"
             SelectedTabColor="White"
             UnselectedTabColor="white" 
-            xmlns:android="clr-namespace:Xamarin.Forms.PlatformConfiguration.AndroidSpecific;assembly=Xamarin.Forms.Core"
+            xmlns:android="clr-namespace:Xamarin.Forms.PlatformConfiguration.AndroidSpecific;assembly=Xamarin.Forms.Core" xmlns:local1="clr-namespace:ProjectDevice.Views"
             android:TabbedPage.ToolbarPlacement="Bottom">
 
 
     <local:Alcoholic Title="Alcholic"/>
     <local:NonAlcoholic Title="Non alcholic"/>
+    <local1:RandomCocktail Title="Random"/>
 
 
 

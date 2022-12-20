@@ -20,7 +20,7 @@ namespace ProjectDevice
         {
             InitializeComponent();
 
-            /*testRepo();*/
+            testRepo();
             /* Gesture Toevoegen aan label */
             TapGestureRecognizer tapGesture = new TapGestureRecognizer();
             tapGesture.Tapped += TapGesture_Tapped;
@@ -81,44 +81,48 @@ namespace ProjectDevice
                 Navigation.PushAsync(new DetailPage(selected));
                 // oneindige lussen voorkome
                 lvwAlcoholicCocktail.SelectedItem = selected;
-                /*lvwAlcoholicCocktail.SelectedItem = selected2;*/
             }
         }
 
-        /*        private async void testRepo()
-                    {
+        private async void testRepo()
+        {
+
+/*            List<Cocktail> random = await CocktailRepo.GetRandomCocktails();
+            foreach(Drink item in random)
+            {
+                Debug.WriteLine(item.Name);
+            }*/
+            
 
 
-                    List<OwnCocktail> cocktails = await CocktailRepo.GetOwnCocktails();
-                    foreach (var cocktail in cocktails)
-                    {
-                        Debug.WriteLine(cocktail);
-                    }
-
-
-                    OwnCocktail item = new OwnCocktail
-                    {
-                        Name = "Blabla blabla blabla",
-                        Alcoholic = "Non Alcoholic",
-                        Instructions = "Doe de witte rum, de kokosmelk en het ananassap in de blender en voeg 2-3 eetlepels gemalen ijs toe. Meng alles glad. Schenk in een cocktailglas en serveer met een rietje. Versier de rand met een partje ananas.",
-                        Image = "https://bettyskitchen.nl/wp-content/uploads/2016/05/klassieke_cocktails_pina_colada_shutterstock_420735802.jpg",
-                        Ingredient1 = "25 ml white rum",
-                        Ingredient2 = "50 ml thick coconut milk",
-                        Ingredient3 = "1 dl pineapple juice",
-                        Ingredient4 = "crushed ice",
-                        Ingredient5 = "",
-                        Ingredient6 = "",
-                        Ingredient7 = "",
-                        Ingredient8 = "",
-                        Ingredient9 = "",
-                        Ingredient10 = "",
-                    };
-
-                    await CocktailRepo.AddCocktail(item);
-
-                }
+/*            List<OwnCocktail> cocktails = await CocktailRepo.GetOwnCocktails();
+            foreach (var cocktail in cocktails)
+            {
+                Debug.WriteLine(cocktail);
             }*/
 
+
+/*            OwnCocktail item = new OwnCocktail
+            {
+                Name = "Blabla blabla blabla",
+                Alcoholic = "Non Alcoholic",
+                Instructions = "Doe de witte rum, de kokosmelk en het ananassap in de blender en voeg 2-3 eetlepels gemalen ijs toe. Meng alles glad. Schenk in een cocktailglas en serveer met een rietje. Versier de rand met een partje ananas.",
+                Image = "https://bettyskitchen.nl/wp-content/uploads/2016/05/klassieke_cocktails_pina_colada_shutterstock_420735802.jpg",
+                Ingredient1 = "25 ml white rum",
+                Ingredient2 = "50 ml thick coconut milk",
+                Ingredient3 = "1 dl pineapple juice",
+                Ingredient4 = "crushed ice",
+                Ingredient5 = "",
+                Ingredient6 = "",
+                Ingredient7 = "",
+                Ingredient8 = "",
+                Ingredient9 = "",
+                Ingredient10 = "",
+            };
+
+            await CocktailRepo.AddCocktail(item);*/
+
+        }
 
     }
 }

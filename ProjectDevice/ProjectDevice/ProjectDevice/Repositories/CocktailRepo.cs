@@ -18,7 +18,7 @@ namespace ProjectDevice.Repositories
         public const string _OWNBASEURL = "https://fa2cocktails.azurewebsites.net/api/";
 
         public const string _BASEURL = "https://www.thecocktaildb.com/api/json/v1/1/";
-        
+       
 
         public static HttpClient GetHttpClient()
         {
@@ -113,6 +113,37 @@ namespace ProjectDevice.Repositories
 
         }
 
+        /*Random cocktail opvragen*/
+        public static async Task<List<Cocktail>> GetRandomCocktails()
+        {
+            string url = $"{_BASEURL}random.php";
+
+            using (HttpClient client = GetHttpClient())
+            {
+                try
+                {
+                    /*Opvragen van Api*/
+                    string json = await client.GetStringAsync(url);
+
+                    //deserialize object to JObject (< newtonsoft)
+                    JObject fullObject = JsonConvert.DeserializeObject<JObject>(json);
+
+                    //path to child token
+                    JToken data = fullObject.SelectToken("drinks");
+
+                    /* Hier doet newtonsoft zn werk */
+                    List<Cocktail> cocktails = data.ToObject<List<Cocktail>>();
+
+                    return cocktails;
+                }
+                catch (Exception ex)
+                {
+                    // ALWAYS add a breakpoint here
+                    throw ex;
+                }
+            }
+
+        }
 
         /*Cocktails toevoegen*/
         public static async Task AddCocktail(OwnCocktail item)

@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ProjectDevice.Views.RandomCocktail">
+
+    <ContentPage.Content>
+
+        <Grid BackgroundColor="#FFF1E4">
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition Height="50"/>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+
+
+            <Image x:Name="imgType" Source="img" Grid.Column="1" Grid.ColumnSpan="4" Grid.Row="2" Grid.RowSpan="4" Aspect="AspectFill" />
+            <Label x:Name="lblTitle" Grid.Row="6" Grid.Column="1" Grid.ColumnSpan="4" TextColor="Brown" FontSize="Medium"/>
+            <Button x:Name="btn_random" Clicked="btn_random_Clicked" Text="RANDOM" Grid.Row="7" Grid.Column="3" Grid.ColumnSpan="2" TextColor="White" CornerRadius="10" BackgroundColor="#BC4B4B" />
+            <Button x:Name="btn_detail" Clicked="btn_detail_Clicked" Text="DETAIL" Grid.Row="7" Grid.Column="1" Grid.ColumnSpan="2" TextColor="White" FontAttributes="Bold" CornerRadius="10" BackgroundColor="#BC4B4B" />
+
+
+        </Grid>
+
+    </ContentPage.Content>
+</ContentPage>
