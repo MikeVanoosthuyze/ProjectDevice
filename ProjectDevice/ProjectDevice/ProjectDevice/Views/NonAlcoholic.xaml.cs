@@ -47,8 +47,8 @@ namespace ProjectDevice
             List<Drink> filteredList = new List<Drink>();
 
             /* owncocktails en cocktails van online gevonden API ophalen */
-            List<Cocktail> list1 = await CocktailRepo.GetNonAlcoholicCocktails();
-            List<OwnCocktail> list2 = await CocktailRepo.GetOwnNonAlcholicCocktails();
+            List<Cocktail> list1 = await CocktailRepo.GetCocktails();
+            List<OwnCocktail> list2 = await CocktailRepo.GetOwnCocktails();
             mixedList.AddRange(list1);
             mixedList.AddRange(list2);
 
