@@ -45,18 +45,28 @@ namespace ProjectDevice
         private async void showAlcoholicCocktails()
         {
 
-            /*lvwAlcoholicCocktail.ItemsSource = await CocktailRepo.GetOwnAlcoholicCocktails();*/
+            /* Niewe list aanmaken om eigen api samen te voegen met api gevonden op internet
+                List aanmaken waar we de gefilterde items insteken. */
+            List<Drink> mixedList = new List<Drink>();
+            List<Drink> filteredList = new List<Drink>();
 
+            /* owncocktails en cocktails van online gevonden API ophalen */
+            List<OwnCocktail> list1 = await CocktailRepo.GetOwnAlcoholicCocktails();
+            List<Cocktail> list2 = await CocktailRepo.GetAlcoholicCocktails();
+            /* 2 lists in 1 list steken */
+            mixedList.AddRange(list2);
+            mixedList.AddRange(list1);
 
+           foreach(Drink item in mixedList)
+            {
+                if(item.Alcoholic == "Alcoholic")
+                {
+                   /*Debug.WriteLine($"{item.Name} -- {item.Alcoholic}");*/
+                    filteredList.Add(item);
+                }
+            }
 
-                List<Drink> results = new List<Drink>();
-                List<OwnCocktail> list1 = await CocktailRepo.GetOwnAlcoholicCocktails();
-                List<Cocktail> list2 = await CocktailRepo.GetAlcoholicCocktails();
-                results.AddRange(list1);
-                results.AddRange(list2);
-
-                lvwAlcoholicCocktail.ItemsSource = results;
-
+            lvwAlcoholicCocktail.ItemsSource = filteredList;
         }
 
         private void lvwAlcoholicCocktail_ItemSelected(object sender, SelectedItemChangedEventArgs e)

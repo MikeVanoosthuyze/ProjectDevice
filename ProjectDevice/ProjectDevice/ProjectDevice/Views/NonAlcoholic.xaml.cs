@@ -41,13 +41,28 @@ namespace ProjectDevice
         private async Task showNonAlcoholicCocktails()
         {
 
-            List<Drink> results = new List<Drink>();
+            /* Niewe list aanmaken om eigen api samen te voegen met api gevonden op internet
+                List aanmaken waar we de gefilterde items insteken. */
+            List<Drink> mixedList = new List<Drink>();
+            List<Drink> filteredList = new List<Drink>();
+
+            /* owncocktails en cocktails van online gevonden API ophalen */
             List<Cocktail> list1 = await CocktailRepo.GetNonAlcoholicCocktails();
             List<OwnCocktail> list2 = await CocktailRepo.GetOwnNonAlcholicCocktails();
-            results.AddRange(list1);
-            results.AddRange(list2);
+            mixedList.AddRange(list1);
+            mixedList.AddRange(list2);
 
-            lvwNonAlcoholicCocktail.ItemsSource = results;
+
+            foreach (Drink item in mixedList)
+            {
+                if (item.Alcoholic == "Non alcoholic")
+                {
+                    /*Debug.WriteLine($"{item.Name} -- {item.Alcoholic}");*/
+                    filteredList.Add(item);
+                }
+            }
+
+            lvwNonAlcoholicCocktail.ItemsSource = filteredList;
         }
 
         private void lvwNonAlcoholicCocktail_ItemSelected(object sender, SelectedItemChangedEventArgs e)

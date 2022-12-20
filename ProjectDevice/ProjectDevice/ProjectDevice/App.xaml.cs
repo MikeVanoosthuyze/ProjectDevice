@@ -35,10 +35,11 @@ namespace ProjectDevice
             if (e.NetworkAccess == NetworkAccess.Internet)
             {
                 MainPage = new NavigationPage(new MainPage());
-            } else
+            }
+            else
             {
-                /* Ga naar NoNetworkPage */
-               MainPage = new NavigationPage(new NoNetworkPage());
+                /*Ga naar NoNetworkPage*/
+              MainPage = new NavigationPage(new NoNetworkPage());
             }
         }
     }

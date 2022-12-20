@@ -15,7 +15,7 @@ namespace ProjectDevice.Repositories
     public class CocktailRepo
     {
 
-        public const string _OWNBASEURL = "https://facocktails.azurewebsites.net/api/";
+        public const string _OWNBASEURL = "https://fa2cocktails.azurewebsites.net/api/";
 
         public const string _BASEURL = "https://www.thecocktaildb.com/api/json/v1/1/";
         
@@ -50,7 +50,7 @@ namespace ProjectDevice.Repositories
                     List<Cocktail> cocktails = data.ToObject<List<Cocktail>>();
 
                     /* Nieuwe lijst aanmaken */
-                    List<Cocktail> AlcoholicDrinks = new List<Cocktail>();
+/*                    List<Cocktail> AlcoholicDrinks = new List<Cocktail>();
 
                     foreach (Cocktail cocktail in cocktails)
                     {
@@ -59,7 +59,7 @@ namespace ProjectDevice.Repositories
                         {
                             AlcoholicDrinks.Add(cocktail);
                         }
-                    }
+                    }*/
 
                     return cocktails;
                 }
@@ -94,18 +94,18 @@ namespace ProjectDevice.Repositories
                     List<Cocktail> cocktails = data.ToObject<List<Cocktail>>();
 
                     /* Nieuwe lijst aanmaken */
-                    List<Cocktail> NonAlcoholicDrinks = new List<Cocktail>();
+/*                    List<Cocktail> NonAlcoholicDrinks = new List<Cocktail>();
 
                     foreach (Cocktail cocktail in cocktails)
                     {
-                        
+
                         if (cocktail.Alcoholic == "Non alcoholic")
                         {
                             NonAlcoholicDrinks.Add(cocktail);
                         }
-                    }
+                    }*/
 
-                    return NonAlcoholicDrinks;
+                    return cocktails;
                 }
                 catch (Exception ex)
                 {
@@ -133,7 +133,7 @@ namespace ProjectDevice.Repositories
 
 
                     /*Nieuwe lijst aanmaken*/
-                    List<OwnCocktail> AlcoholicDrinks = new List<OwnCocktail>();
+/*                    List<OwnCocktail> AlcoholicDrinks = new List<OwnCocktail>();
 
                     foreach (OwnCocktail cocktail in cocktails)
                     {
@@ -142,9 +142,9 @@ namespace ProjectDevice.Repositories
                         {
                             AlcoholicDrinks.Add(cocktail);
                         }
-                    }
+                    }*/
 
-                    return AlcoholicDrinks;
+                    return cocktails;
 
 
 
@@ -175,20 +175,17 @@ namespace ProjectDevice.Repositories
 
 
                     /* Nieuwe lijst aanmaken */
-                    List<OwnCocktail> NonAlcoholicDrinks = new List<OwnCocktail>();
+/*                    List<OwnCocktail> NonAlcoholicDrinks = new List<OwnCocktail>();
 
                     foreach (OwnCocktail cocktail in cocktails)
                     {
-                   
+
                         if (cocktail.Alcoholic == "non alcoholic" || cocktail.Alcoholic == "Non alcoholic")
                         {
                             NonAlcoholicDrinks.Add(cocktail);
                         }
-                    }
-                    return NonAlcoholicDrinks;
-
-
-
+                    }*/
+                    return cocktails;
                 }
                 catch (Exception ex)
                 {
