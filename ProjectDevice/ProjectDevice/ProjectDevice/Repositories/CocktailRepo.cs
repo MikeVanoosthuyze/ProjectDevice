@@ -29,7 +29,7 @@ namespace ProjectDevice.Repositories
 
 
         /*Alcoholic cocktail opvragen*/
-        public static async Task<List<Cocktail>> GetAlcoholicCocktails()
+        public static async Task<List<Cocktail>> GetCocktails()
         {
             string url = $"{_BASEURL}search.php?f=a";
 
@@ -72,53 +72,8 @@ namespace ProjectDevice.Repositories
 
         }
 
-        /*Non Alcoholic cocktail opvragen*/
-        public static async Task<List<Cocktail>> GetNonAlcoholicCocktails()
-        {
-            string url = $"{_BASEURL}search.php?f=a";
-
-            using (HttpClient client = GetHttpClient())
-            {
-                try
-                {
-                    /*Opvragen van Api*/
-                    string json = await client.GetStringAsync(url);
-
-                    //deserialize object to JObject (< newtonsoft)
-                    JObject fullObject = JsonConvert.DeserializeObject<JObject>(json);
-
-                    //path to child token
-                    JToken data = fullObject.SelectToken("drinks");
-
-                    /* Hier doet newtonsoft zn werk */
-                    List<Cocktail> cocktails = data.ToObject<List<Cocktail>>();
-
-                    /* Nieuwe lijst aanmaken */
-/*                    List<Cocktail> NonAlcoholicDrinks = new List<Cocktail>();
-
-                    foreach (Cocktail cocktail in cocktails)
-                    {
-
-                        if (cocktail.Alcoholic == "Non alcoholic")
-                        {
-                            NonAlcoholicDrinks.Add(cocktail);
-                        }
-                    }*/
-
-                    return cocktails;
-                }
-                catch (Exception ex)
-                {
-                    // ALWAYS add a breakpoint here
-                    throw ex;
-                }
-            }
-
-        }
-
-
         /*Alcoholic OwnCocktails opvragen*/
-        public static async Task<List<OwnCocktail>> GetOwnAlcoholicCocktails()
+        public static async Task<List<OwnCocktail>> GetOwnCocktails()
         {
             string url = $"{_OWNBASEURL}/cocktails";
 
@@ -157,49 +112,6 @@ namespace ProjectDevice.Repositories
             }
 
         }
-
-
-        /*Alcoholic OwnCocktails opvragen*/
-        public static async Task<List<OwnCocktail>> GetOwnNonAlcholicCocktails()
-        {
-            string url = $"{_OWNBASEURL}/cocktails";
-
-            using (HttpClient client = GetHttpClient())
-            {
-                try
-                {
-                    /*Opvragen van Api*/
-                    string json = await client.GetStringAsync(url);
-                    /* Hier doet newtonsoft zn werk */
-                    List<OwnCocktail> cocktails = JsonConvert.DeserializeObject<List<OwnCocktail>>(json);
-
-
-                    /* Nieuwe lijst aanmaken */
-/*                    List<OwnCocktail> NonAlcoholicDrinks = new List<OwnCocktail>();
-
-                    foreach (OwnCocktail cocktail in cocktails)
-                    {
-
-                        if (cocktail.Alcoholic == "non alcoholic" || cocktail.Alcoholic == "Non alcoholic")
-                        {
-                            NonAlcoholicDrinks.Add(cocktail);
-                        }
-                    }*/
-                    return cocktails;
-                }
-                catch (Exception ex)
-                {
-                    // ALWAYS add a breakpoint here
-                    throw ex;
-                }
-            }
-
-        }
-
-
-
-
-
 
 
         /*Cocktails toevoegen*/
